@@ -271,4 +271,75 @@ foreach ($skinfiles as $file)
 
 $plugin_body .= "</table>";
 
+
+
+$admskinfiles[] = 'admin.banlist.tpl';
+$admskinfiles[] = 'admin.breadcrumbs.tpl';
+$admskinfiles[] = 'admin.cache.tpl';
+$admskinfiles[] = 'admin.comments.tpl';
+$admskinfiles[] = 'admin.config.gallery.tpl';
+$admskinfiles[] = 'admin.config.lang.tpl';
+$admskinfiles[] = 'admin.config.skin.tpl';
+$admskinfiles[] = 'admin.config.time.tpl';
+$admskinfiles[] = 'admin.config.tpl';
+$admskinfiles[] = 'admin.dic.tpl';
+$admskinfiles[] = 'admin.footer.tpl';
+$admskinfiles[] = 'admin.forums.structure.tpl';
+$admskinfiles[] = 'admin.forums.tpl';
+$admskinfiles[] = 'admin.gallery.tpl';
+$admskinfiles[] = 'admin.header.tpl';
+$admskinfiles[] = 'admin.hits.tpl';
+$admskinfiles[] = 'admin.home.tpl';
+$admskinfiles[] = 'admin.log.tpl';
+$admskinfiles[] = 'admin.menu.tpl';
+$admskinfiles[] = 'admin.nav.tpl';
+$admskinfiles[] = 'admin.page.add.tpl';
+$admskinfiles[] = 'admin.page.edit.tpl';
+$admskinfiles[] = 'admin.page.manager.tpl';
+$admskinfiles[] = 'admin.page.tpl';
+$admskinfiles[] = 'admin.pfs.tpl';
+$admskinfiles[] = 'admin.plug.tpl';
+$admskinfiles[] = 'admin.pm.tpl';
+$admskinfiles[] = 'admin.polls.tpl';
+$admskinfiles[] = 'admin.ratings.tpl';
+$admskinfiles[] = 'admin.referers.tpl';
+$admskinfiles[] = 'admin.rights.tpl';
+$admskinfiles[] = 'admin.rightsbyitem.tpl';
+$admskinfiles[] = 'admin.smilies.tpl';
+$admskinfiles[] = 'admin.tools.tpl';
+$admskinfiles[] = 'admin.tpl';
+$admskinfiles[] = 'admin.trashcan.tpl';
+$admskinfiles[] = 'admin.upgrade.tpl';
+$admskinfiles[] = 'admin.users.tpl';
+
+$plugin_body .= "<h4>Admin Skin files (templates) :</h4>";
+
+$plugin_body .= "<table class=\"cells striped\">";
+$plugin_body .= "<tr>";
+$plugin_body .= "<td class=\"coltop\" style=\"width:40%;\">Skin file</td>";
+$plugin_body .= "<td class=\"coltop\" style=\"width:30%;\">Found ?</td>";
+$plugin_body .= "<td class=\"coltop\" style=\"width:30%;\">Size (Bytes)</td>";
+$plugin_body .= "</tr>";
+
+foreach ($admskinfiles as $file)
+	{
+	$file = "system/adminskin/".$skin."/".$file;
+    $plugin_body .= "<tr>";
+	$plugin_body .= "<td>".$file."</td>";
+
+	if (file_exists($file))
+       {
+		$plugin_body .= "<td style=\"background-color:".$color[1]."!important; text-align:center;\">Present</td>";
+		$plugin_body .= "<td style=\"text-align:right;\">".@filesize($file)."</td>";
+       }
+    else
+       {
+       $plugin_body .= "<td style=\"background-color:".$color[0]."!important; text-align:center;\">Missing !</td>";
+       $plugin_body .= "<td style=\"text-align:right;\">0</td>";
+       }
+	$plugin_body .= "</tr>";
+	}
+
+$plugin_body .= "</table>";
+
 ?>
