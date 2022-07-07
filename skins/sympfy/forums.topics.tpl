@@ -1,9 +1,6 @@
 <!-- BEGIN: MAIN -->
-
 <main id="forums">
-	
 	<div class="container">
-	
 		<div class="section-title">
 		
 			{BREADCRUMBS}
