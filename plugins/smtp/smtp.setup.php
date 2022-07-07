@@ -37,7 +37,7 @@ smtp_port=03:string::465:SMTP port
 smtp_login=04:string::noreply@test.ru:SMTP login
 smtp_pass=05:string::ZdvXSikP:SMTP password
 smtp_from=06:string::noreply@test.ru:SMTP sender email
-smtp_from_title=07:string::RobotMail:Mail From title
+smtp_from_title=07:string::SeditioMail:Mail From title
 smtp_ssl=08:select:yes,no:yes:Use SSL?
 smtp_debug=09:select:yes,no:yes:Use Debug with log file?
 [END_SED_EXTPLUGIN_CONFIG]
