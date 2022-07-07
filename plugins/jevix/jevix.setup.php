@@ -30,8 +30,8 @@ Lock_members=W12345A
 [END_SED_EXTPLUGIN]
 
 [BEGIN_SED_EXTPLUGIN_CONFIG]
-use_xhtml=01:select:yes,no:yes:Use XHTML standart
-use_for_admin=02:select:yes,no:yes:Use Jevix for Administrators
+use_xhtml=01:select:yes,no:yes:XHTML standardını kullan
+use_for_admin=02:select:yes,no:yes:Yöneticiler için Jevix'i kullanın
 [END_SED_EXTPLUGIN_CONFIG]
 
 ==================== */
