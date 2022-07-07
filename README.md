@@ -1,10 +1,10 @@
 <h2>Seditio</h2>
 
-Seditio is a modular content management system and content management framework powered by PHP and MySQL.
+Seditio, PHP ve MySQL tarafından desteklenen modüler bir içerik yönetim sistemi ve içerik yönetim çerçevesidir.
 
-The engine distinguishes itself from other content management systems by keeping the HTML code completely separate from the PHP. 
-This allows graphic designers to create skins without having to know much PHP. Seditio can be skinned by editing pre-made skins 
-supplied by the community, or easily making one's own by creating a template, and simply substituting for the TPL tags.
+Motor, HTML kodunu PHP'den tamamen ayrı tutarak kendisini diğer içerik yönetim sistemlerinden ayırır.
+Bu, grafik tasarımcılarının çok fazla PHP bilmek zorunda kalmadan dış görünümler oluşturmasına olanak tanır. Seditio, önceden yapılmış dış görünümleri düzenleyerek kaplanabilir
+topluluk tarafından sağlanır veya bir şablon oluşturarak ve basitçe TPL etiketlerini değiştirerek kolayca kendi şablonunu oluşturur.
 
 <h2>Requirements</h2>
 
