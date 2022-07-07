@@ -6,9 +6,9 @@ Motor, HTML kodunu PHP'den tamamen ayrı tutarak kendisini diğer içerik yönet
 Bu, grafik tasarımcılarının çok fazla PHP bilmek zorunda kalmadan dış görünümler oluşturmasına olanak tanır. Seditio, önceden yapılmış dış görünümleri düzenleyerek kaplanabilir
 topluluk tarafından sağlanır veya bir şablon oluşturarak ve basitçe TPL etiketlerini değiştirerek kolayca kendi şablonunu oluşturur.
 
-<h2>Requirements</h2>
+<h2>Gereksinimler</h2>
 
-To install Seditio you need the following server software pre-installed:
+Seditio'yu kurmak için aşağıdaki sunucu yazılımının önceden kurulmuş olması gerekir:
 
 <ul>
 <li>WWW Server (Apache, nginx, etc)</li>
@@ -16,9 +16,9 @@ To install Seditio you need the following server software pre-installed:
 <li>MySQL 5.0.7 or higher</li>
 </ul>
 
-<h2>Server configuration</h2>
+<h2>Sunucu yapılandırması</h2>
 
-<p>You MUST ensure that PHP has been compiled with support for:</p>
+<p>PHP'nin aşağıdakiler için destekle derlendiğinden EMİN OLMALISINIZ:</p>
 
 <ul>
 <li>GD</li>
@@ -29,11 +29,11 @@ To install Seditio you need the following server software pre-installed:
 <li>Sessions</li>
 </ul>
 
-<h2>Installation</h2>
+<h2>Kurulum</h2>
 
-<p>1. Copy all files of the engine in the root directory or subdirectory</p>
+<p>1. Motorun tüm dosyalarını kök dizine veya alt dizine kopyalayın</p>
 
-<p>2. Make the following directory and all their subdirectories writable too with CHMOD 777 or CHMOD 775:</p>
+<p>2. CHMOD 777 veya CHMOD 775 ile aşağıdaki dizini ve tüm alt dizinlerini de yazılabilir yapın:</p>
 
 <ul>
 <li>/datas/avatars</li>
