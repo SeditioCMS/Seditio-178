@@ -29,7 +29,7 @@ To install Seditio you need the following server software pre-installed:
 <li>Sessions</li>
 </ul>
 
-<h2>Installation</h2>
+<h2>Kurulum</h2>
 
 <p>1. Copy all files of the engine in the root directory or subdirectory</p>
 
