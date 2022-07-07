@@ -4787,8 +4787,6 @@ function sed_skinfile($base, $adminskin = false)
 	{
 	global $usr, $cfg;
 	$base_depth = is_array($base) ? count($base) : 1;
-	
-  
 	$tpl_path = SED_ROOT . '/skins/'.$usr['skin'].'/'.$base.'.tpl';
 	$tpl_admin_path = SED_ROOT . '/system/adminskin/'.$cfg['adminskin'].'/'.$base.'.tpl';  
 	$tpl_admin_path = (file_exists($tpl_admin_path)) ? $tpl_admin_path : $tpl_path;
