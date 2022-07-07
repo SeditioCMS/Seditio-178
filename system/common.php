@@ -3,7 +3,7 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditiocms.com
 [BEGIN_SED]
 File=system/common.php
 Version=178
@@ -16,7 +16,8 @@ Description=Common
 
 if (!defined('SED_CODE')) { die('Wrong URL.'); }
 
-if (!function_exists('get_magic_quotes_gpc'))
+/* ======== Php 7.4 de gerekli değil php 5.6 için gerekli ======== */
+/*if (!function_exists('get_magic_quotes_gpc'))
 {
 	function get_magic_quotes_gpc(&$value) 
 	{ 
@@ -24,7 +25,7 @@ if (!function_exists('get_magic_quotes_gpc'))
 	} 
 	$gpc = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST); 
 	array_walk_recursive($gpc, 'get_magic_quotes_gpc');  
-}
+}*/
 
 error_reporting(E_ALL ^ E_NOTICE);  
 
@@ -477,7 +478,7 @@ $yesno_revers_arr = array(0 => $L['Yes'], 1 => $L['No']);
 /* ======== Who's online part 2 ======== */
 
 $out['whosonline'] = ($cfg['disablewhosonline']) ? '' : $sys['whosonline_reg_count'].' '.$L['com_members'].', '.$sys['whosonline_vis_count'].' '.$L['com_guests'];
-$out['copyright'] = "<a href=\"https://seditio.org\">".$L['foo_poweredby']." Seditio</a>";
+$out['copyright'] = "<a href=\"https://seditiocms.com\">".$L['foo_poweredby']." Seditio</a>";
 
 /* ======== Various ======== */
 

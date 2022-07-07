@@ -3,7 +3,7 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditiocms.com
 [BEGIN_SED]
 File=system/functions.php
 Version=178
@@ -2785,7 +2785,7 @@ function sed_htmlmetas($description = '', $keywords = '')
 <meta http-equiv=\"content-type\" content=\"".$contenttype."; charset=".$cfg['charset']."\" />
 <meta name=\"description\" content=\"".$description."\" />
 <meta name=\"keywords\" content=\"".$keywords."\" />
-<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio.org\" />
+<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditiocms.com\" />
 <meta http-equiv=\"pragma\" content=\"no-cache\" />
 <meta http-equiv=\"cache-control\" content=\"no-cache\" />
 <meta http-equiv=\"last-modified\" content=\"".gmdate("D, d M Y H:i:s")." GMT\" />
