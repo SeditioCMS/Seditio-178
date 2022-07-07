@@ -6,7 +6,7 @@ Motor, HTML kodunu PHP'den tamamen ayrı tutarak kendisini diğer içerik yönet
 Bu, grafik tasarımcılarının çok fazla PHP bilmek zorunda kalmadan dış görünümler oluşturmasına olanak tanır. Seditio, önceden yapılmış dış görünümleri düzenleyerek kaplanabilir
 topluluk tarafından sağlanır veya bir şablon oluşturarak ve basitçe TPL etiketlerini değiştirerek kolayca kendi şablonunu oluşturur.
 
-<h2>Requirements</h2>
+<h2>Gereksinimler</h2>
 
 To install Seditio you need the following server software pre-installed:
 
