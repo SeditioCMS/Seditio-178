@@ -16,17 +16,6 @@ Description=Common
 
 if (!defined('SED_CODE')) { die('Wrong URL.'); }
 
-/* ======== Php 7.4 de gerekli değil php 5.6 için gerekli ======== */
-/*if (!function_exists('get_magic_quotes_gpc'))
-{
-	function get_magic_quotes_gpc(&$value) 
-	{ 
-		$value = stripslashes($value); 
-	} 
-	$gpc = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST); 
-	array_walk_recursive($gpc, 'get_magic_quotes_gpc');  
-}*/
-
 error_reporting(E_ALL ^ E_NOTICE);  
 
 /* ======== Connect to the SQL DB======== */

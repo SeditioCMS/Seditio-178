@@ -2777,9 +2777,7 @@ function sed_htmlmetas($description = '', $keywords = '')
 	{
 	global $cfg, $sys;
 	$contenttype = "text/html";
-	/* açıklama kısmı bug fix */
 	$description = (empty($description)) ? $cfg['subtitle'] : $description;
-	//$description = (empty($description)) ? $cfg['maintitle']." - ".$cfg['subtitle'] : $description;
 	$keywords = (empty($keywords)) ? $cfg['metakeywords'] : $keywords;
 	
 	$result = "<base href=\"".$sys['abs_url']."\" />
