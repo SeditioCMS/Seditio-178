@@ -394,27 +394,30 @@ $L['adm_nogd'] = "The GD graphical library is not supported by this host, Sediti
 
 /* ====== Pages ====== */
 
-$L['adm_structure'] = "Structure of the pages (categories)";
-$L['adm_syspages'] = "View the category 'system'";
-$L['adm_help_page'] = "The pages that belongs to the category 'system' are not displayed in the public listings, it's to make standalone pages.";
-$L['adm_sortingorder'] = "Set a default sorting order for the categories";
-$L['adm_fileyesno'] = "File (yes/no)";
-$L['adm_fileurl'] = "File URL";
-$L['adm_filesize'] = "File size";
-$L['adm_filecount'] = "File hit count";
+$L['adm_structure'] = "Sayfaların yapısı (kategoriler)";
+$L['adm_syspages'] = "'Sistem' kategorisini görüntüleyin";
+$L['adm_help_page'] = "'Sistem' kategorisine ait sayfalar genel listelerde gösterilmez, bağımsız sayfalar yapmak içindir..";
+$L['adm_sortingorder'] = "Kategoriler için varsayılan bir sıralama düzeni belirleyin";
+$L['adm_fileyesno'] = "Dosya (evet/hayır)";
+$L['adm_fileurl'] = "Dosya URL'si";
+$L['adm_filesize'] = "Dosya boyutu";
+$L['adm_filecount'] = "Dosya indirilme sayısı";
 
-$L['adm_tpl_mode'] = "Template mode";	
-$L['adm_tpl_empty'] = "Default";	
-$L['adm_tpl_forced'] = "Same as";	
-$L['adm_tpl_parent'] = "Same as the parent category";	
+$L['adm_tpl_mode'] = "Şablon modu";	
+$L['adm_tpl_empty'] = "Varsayılan";	
+$L['adm_tpl_forced'] = "İle aynı";	
+$L['adm_tpl_parent'] = "Ana kategoriyle aynı";	
 
-$L['adm_enablecomments'] = "Enable Comments";   // New v173
-$L['adm_enableratings'] = "Enable Ratings";     // New v173
+$L['adm_enablecomments'] = "Yorumları Etkinleştir";   // New v173
+$L['adm_enableratings'] = "Derecelendirmeleri Etkinleştir";     // New v173
 
 /* ====== Polls ====== */
 
-$L['adm_help_polls'] = "Once you created a new poll topics, select 'Edit' to add options (choices) for this poll.<br />'Delete' will delete the selected poll, the options, and all related votes.<br />'Reset' will delete all votes for the selected poll. It won't delete the poll itself or the options.<br />'Bump' will change the poll creation date to the current date, and so will make the poll 'current', top of the list.";
-$L['adm_poll_title'] = "Poll title";
+$L['adm_help_polls'] = "Yeni bir anket konusu oluşturduktan sonra, bu anket için seçenek (seçenekler) eklemek için 'Düzenle'yi seçin.<br />
+'Sil' seçilen anketi, seçenekleri ve ilgili tüm oyları siler.<br />
+'Sıfırla' seçilen anket için tüm oyları siler. Anketin kendisini veya seçenekleri silmez.<br />
+'Bump', anket oluşturma tarihini geçerli tarihe değiştirecek ve böylece anketi listenin en üstünde 'geçerli' yapacaktır..";
+$L['adm_poll_title'] = "Anket başlığı";
 
 /* ====== Statistics ====== */
 
@@ -438,14 +441,14 @@ $L['adm_checkingcore'] = "Çekirdek dosyaları kontrol ediliyor...";
 $L['adm_checkskins'] = "Tüm tema dosyalarının var olduğunu kontrol edin";
 $L['adm_checkskin'] = "Tema için TPL dosyalarını kontrol edin";
 $L['adm_checkingskin'] = "Tema kontrol ediliyor...";
-$L['adm_hits'] = "Hits";
+$L['adm_hits'] = "Hit";
 $L['adm_check_ok'] = "Ok";
-$L['adm_check_missing'] = "Missing";
-$L['adm_ref_lowhits'] = "Purge entries where hits are lower than 5";
-$L['adm_maxhits'] = "Maximum hitcount was reached %1\$s, %2\$s pages displayed this day."; 
-$L['adm_byyear'] = "By year"; 		
-$L['adm_bymonth'] = "By month"; 	
-$L['adm_byweek'] = "By week"; 		
+$L['adm_check_missing'] = "Eksik";
+$L['adm_ref_lowhits'] = "5'ten düşük olan girişleri temizle";
+$L['adm_maxhits'] = "Maksimum isabet sayısına ulaşıldı %1\$s, %2\$s bu gün görüntülenen sayfalar."; 
+$L['adm_byyear'] = "Yıla göre"; 		
+$L['adm_bymonth'] = "Ay'a göre"; 	
+$L['adm_byweek'] = "Haftaya göre"; 		
 
 /* ====== Ratings ====== */
 
