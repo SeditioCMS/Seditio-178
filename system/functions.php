@@ -64,7 +64,7 @@ $cfg['textarea_default_height'] = 16;
 $cfg['sqldb'] = 'mysql';
 $cfg['sqldbprefix'] = 'sed_';
 $cfg['version'] = '178';
-$cfg['versions_list'] = array (120, 121, 125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178);
+$cfg['versions_list'] = array (120, 121, 125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178, 179);
 $cfg['group_colors'] = array ('red', 'yellow', 'black', 'blue', 'white', 'green', 'gray', 'navy', 'darkmagenta', 'pink', 'cadetblue', 'linen', 'deepskyblue', 'inherit');
 $cfg['separator_symbol'] = "&raquo;";
 
@@ -2784,7 +2784,7 @@ function sed_htmlmetas($description = '', $keywords = '', $contenttype = 'text/h
 <meta http-equiv=\"content-type\" content=\"".$contenttype."; charset=".$cfg['charset']."\" />
 <meta name=\"description\" content=\"".$description."\" />
 <meta name=\"keywords\" content=\"".$keywords."\" />
-<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditiocms.com\" />
+<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio.org\" />
 <meta http-equiv=\"pragma\" content=\"no-cache\" />
 <meta http-equiv=\"cache-control\" content=\"no-cache\" />
 <meta http-equiv=\"last-modified\" content=\"".gmdate("D, d M Y H:i:s")." GMT\" />
