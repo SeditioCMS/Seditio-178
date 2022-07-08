@@ -289,108 +289,113 @@ $L['cfg_plugtitle'] = array("Title for plugins", "Available options: {MAINTITLE}
 
 /* ====== Rss ====== */
 
-$L['cfg_disable_rss'] = array("Disable RSS feeds", "");
-$L['cfg_disable_rsspages'] = array("Disable RSS feed for pages", "");
-$L['cfg_disable_rsscomments'] = array("Disable RSS feed for comments", "");
-$L['cfg_disable_rssforums'] = array("Disable RSS feed for the forums", "");
-$L['cfg_rss_timetolive'] = array("Cash time for RSS feed", "in seconds");
-$L['cfg_rss_defaultcode'] = array("Default RSS feed", "enter the category code");
-$L['cfg_rss_maxitems'] = array("The maximum number of rows in the RSS feed", "");
+$L['cfg_disable_rss'] = array("RSS devre dışı bırak", "");
+$L['cfg_disable_rsspages'] = array("Sayfalar için RSS devre dışı bırak", "");
+$L['cfg_disable_rsscomments'] = array("Yorumlar için RSS devre dışı bırak", "");
+$L['cfg_disable_rssforums'] = array("Forumlar için RSS devre dışı bırak", "");
+$L['cfg_rss_timetolive'] = array("RSS için zaman", "saniyeler içinde");
+$L['cfg_rss_defaultcode'] = array("Varsayılan RSS", "kategori kodunu girin");
+$L['cfg_rss_maxitems'] = array("RSS maksimum satır sayısı", "");
 
-$L['adm_help_config_rss'] = "Links to open RSS feeds: <br />".$cfg['mainurl']."/"."rss (by default, the output of news categories specified in the settings) <br /> ".$cfg['mainurl']."/"."rss/pages?c=XX (XX - Category code, the last pages of the category) <br />".$cfg['mainurl']."/"."rss/comments?id=XX (XX - ID page, comments page) <br />".$cfg['mainurl']."/"."rss/forums (latest posts from all sections of the forum) <br />".$cfg['mainurl']."/"."rss/forums?s=XX (XX - ID section, recent posts section) <br />".$cfg['mainurl']."/"."rss/forums?q=XX (XX - ID topic, recent posts in the topic) <br />".$cfg['mainurl']."/"."rss/forums?s=XX&q=YY (XX - ID section, YY - ID topic)";
+$L['adm_help_config_rss'] = "RSS açmak için bağlantılar: <br />".$cfg['mainurl']."/"."rss (varsayılan olarak, ayarlarda belirtilen haber kategorilerinin çıktısı) 
+<br /> ".$cfg['mainurl']."/"."rss/pages?c=XX (XX - Kategori kodu, kategorinin son sayfaları) 
+<br />".$cfg['mainurl']."/"."rss/comments?id=XX (XX - ID sayfa, yorum sayfası) <br />".$cfg['mainurl']."/"."rss/forums (forumun tüm bölümlerinden en son gönderiler) 
+<br />".$cfg['mainurl']."/"."rss/forums?s=XX (XX - ID section, recent posts section) <br />".$cfg['mainurl']."/"."rss/forums?q=XX (XX - ID topic, konuyla ilgili son gönderiler) 
+<br />".$cfg['mainurl']."/"."rss/forums?s=XX&q=YY (XX - ID section, YY - ID topic)";
 
 /* ====== Forums ====== */
 
-$L['adm_diplaysignatures'] = "Display signatures";
-$L['adm_enablebbcodes'] = "Enable BBcodes";
-$L['adm_enablesmilies'] = "Enable smilies";
-$L['adm_enableprvtopics'] = "Allow private topics";
-$L['adm_countposts'] = "Count posts";
-$L['adm_autoprune'] = "Auto-prune topics after * days";
-$L['adm_postcounters'] = "Check the counters";
-$L['adm_help_forums'] = "Not available";
-$L['adm_forum_structure'] = "Structure of the forums (categories)";	
-$L['adm_forum_structure_cat'] = "Structure of the forums";	
-$L['adm_help_forums_structure'] = "Not available";	
-$L['adm_defstate'] = "Default state";	
-$L['adm_defstate_0'] = "Folded";	
-$L['adm_defstate_1'] = "Unfolded";
-$L['adm_parentcat'] = "Parent category";	// New in v172	
+$L['adm_diplaysignatures'] = "İmzaları görüntüle";
+$L['adm_enablebbcodes'] = "BBcode'ları Etkinleştir";
+$L['adm_enablesmilies'] = "İfadeleri etkinleştir";
+$L['adm_enableprvtopics'] = "Özel konulara izin ver";
+$L['adm_countposts'] = "Gönderileri say";
+$L['adm_autoprune'] = "Konuları * gün sonra Auto-prune";
+$L['adm_postcounters'] = "Sayaçları kontrol edin";
+$L['adm_help_forums'] = "Müsait değil";
+$L['adm_forum_structure'] = "Forumların yapısı (kategoriler)";	
+$L['adm_forum_structure_cat'] = "Forumların yapısı";	
+$L['adm_help_forums_structure'] = "Müsait değil";	
+$L['adm_defstate'] = "Varsayılan durum";	
+$L['adm_defstate_0'] = "Katlanmış";	
+$L['adm_defstate_1'] = "Açılmış";
+$L['adm_parentcat'] = "Alt kategorisi";	// New in v172	
 
 
 /* ====== IP search ====== */
 
-$L['adm_searchthisuser'] = "Search for this IP in the user database";
-$L['adm_dnsrecord'] = "DNS record for this address";
+$L['adm_searchthisuser'] = "Bu IP'yi kullanıcı veritabanında arayın";
+$L['adm_dnsrecord'] = "Bu adres için DNS kaydı";
 
 /* ====== Smilies ====== */
 
-$L['adm_help_smilies'] = "Not available";
+$L['adm_help_smilies'] = "Müsait değil";
 
 /* ====== Dictionary ====== */
 
-$L['adm_dic_list'] = "Directories list";
-$L['adm_dictionary'] = "Directory";
-$L['adm_dic_title'] = "Title of the directory";
-$L['adm_dic_code'] = "Code of the directory (name of extra field)";
-$L['adm_dic_list'] = "List of the directories";
-$L['adm_dic_term_list'] = "List of terms";
-$L['adm_dic_add'] = "Add new directory";
-$L['adm_dic_edit'] = "Edit directory";
-$L['adm_dic_add_term'] = "Add a new term";
-$L['adm_dic_term_title'] = "Title of the term";
-$L['adm_dic_term_value'] = "Value of the term";
-$L['adm_dic_term_defval'] = "Make a term default?";
-$L['adm_dic_term_edit'] = "Edit term from directory";
-$L['adm_dic_children'] = "Children directory";
+$L['adm_dic_list'] = "Dizin listesi";
+$L['adm_dictionary'] = "Dizin";
+$L['adm_dic_title'] = "Dizinin başlığı";
+$L['adm_dic_code'] = "Dizinin kodu (ek alan adı)";
+$L['adm_dic_list'] = "Dizinlerin listesi";
+$L['adm_dic_term_list'] = "Terimler listesi";
+$L['adm_dic_add'] = "Yeni dizin ekle";
+$L['adm_dic_edit'] = "Dizini düzenle";
+$L['adm_dic_add_term'] = "Yeni bir terim ekle";
+$L['adm_dic_term_title'] = "Terimin başlığı";
+$L['adm_dic_term_value'] = "Terimin değeri";
+$L['adm_dic_term_defval'] = "Bir terimi varsayılan yap?";
+$L['adm_dic_term_edit'] = "Dizinden terimi düzenle";
+$L['adm_dic_children'] = "Alt dizini";
 
-$L['adm_dic_mera'] = "Unit";
-$L['adm_dic_values'] = "List of values for directory";
+$L['adm_dic_mera'] = "Birim";
+$L['adm_dic_values'] = "Dizin için değer listesi";
 
-$L['adm_dic_form_title'] = "Title for form element";
-$L['adm_dic_form_desc'] = "Text for form element";
-$L['adm_dic_form_size'] = "Size of text field";
-$L['adm_dic_form_maxsize'] = "The maximum size of text field";
-$L['adm_dic_form_cols'] = "The cols of text field";
-$L['adm_dic_form_rows'] = "The rows of text field";
+$L['adm_dic_form_title'] = "Form öğesi için başlık";
+$L['adm_dic_form_desc'] = "Form öğesi için metin";
+$L['adm_dic_form_size'] = "Metin alanının boyutu";
+$L['adm_dic_form_maxsize'] = "Metin alanının maksimum boyutu";
+$L['adm_dic_form_cols'] = "Metin alanının sütunları";
+$L['adm_dic_form_rows'] = "Metin alanı satırları";
 
-$L['adm_dic_extra'] = "Extra field";
-$L['adm_dic_addextra'] = "Add extra field";
-$L['adm_dic_editextra'] = "Edit extra field";
-$L['adm_dic_extra_location'] = "Name of table";
-$L['adm_dic_extra_type'] = "Data type of field";
-$L['adm_dic_extra_size'] = "Length of field";
+$L['adm_dic_extra'] = "Ekstra alan";
+$L['adm_dic_addextra'] = "Ekstra alan ekle";
+$L['adm_dic_editextra'] = "Ekstra alanı düzenle";
+$L['adm_dic_extra_location'] = "Tablonun adı";
+$L['adm_dic_extra_type'] = "Alanın veri türü";
+$L['adm_dic_extra_size'] = "Alan uzunluğu";
 
 $L['adm_dic_comma_separat'] = "(values comma separated)";
 
 /* ====== Menu manager ====== */
 
-$L['adm_menuitems'] = "Menu items";
-$L['adm_additem'] = "Add item";
-$L['adm_position'] = "Position";
-$L['adm_confirm_delete'] = "Confirm delete?";
-$L['adm_addmenuitem'] = "Add menu item";
-$L['adm_editmenuitem'] = "Edit menu item";
-$L['adm_parentitem'] = "Parent item";
+$L['adm_menuitems'] = "Menü Girişleri";
+$L['adm_additem'] = "Menü Ekle";
+$L['adm_position'] = "Yol";
+$L['adm_confirm_delete'] = "Silmeyi onayla?";
+$L['adm_addmenuitem'] = "Menü öğesi ekle";
+$L['adm_editmenuitem'] = "Menü öğesini düzenle";
+$L['adm_parentitem'] = "Menü kategorisi";
 $L['adm_url'] = "URL";
-$L['adm_activity'] = "Active?";
+$L['adm_activity'] = "Aktif?";
 
 /* ====== PFS ====== */
 
-$L['adm_gd'] = "GD graphical library";
-$L['adm_allpfs'] = "All PFS";
-$L['adm_allfiles'] = "All files";
-$L['adm_thumbnails'] = "Thumbnails";
-$L['adm_orphandbentries'] = "Orphan DB entries";
-$L['adm_orphanfiles'] = "Orphan files";
-$L['adm_delallthumbs'] = "Delete all thumbnails";
-$L['adm_rebuildallthumbs']= "Delete and rebuild all thumbnails";
-$L['adm_help_pfsthumbs'] = "Not available";
-$L['adm_help_check1'] = "Not available";
-$L['adm_help_check2'] = "Not available";
-$L['adm_help_pfsfiles'] = "Not available";
-$L['adm_help_allpfs'] = "Not available";
-$L['adm_nogd'] = "The GD graphical library is not supported by this host, Seditio won't be able to create thumbnails for the PFS images. You must go into the configuration panel, tab 'Personal File Space', and set Thumbnails generation = 'Disabled'.";
+$L['adm_gd'] = "GD grafik kitaplığı";
+$L['adm_allpfs'] = "Tüm PFS";
+$L['adm_allfiles'] = "Tüm dosyalar";
+$L['adm_thumbnails'] = "Küçük resimler";
+$L['adm_orphandbentries'] = "Orphan DB girişleri";
+$L['adm_orphanfiles'] = "Orphan dosyalar";
+$L['adm_delallthumbs'] = "Tüm küçük resimleri sil";
+$L['adm_rebuildallthumbs']= "Tüm küçük resimleri silin ve yeniden oluşturun";
+$L['adm_help_pfsthumbs'] = "Müsait değil";
+$L['adm_help_check1'] = "Müsait değil";
+$L['adm_help_check2'] = "Müsait değil";
+$L['adm_help_pfsfiles'] = "Müsait değil";
+$L['adm_help_allpfs'] = "Müsait değil";
+$L['adm_nogd'] = "GD grafik kitaplığı bu ana bilgisayar tarafından desteklenmiyor, Seditio, PFS görüntüleri için küçük resimler oluşturamayacak. 
+Yapılandırma paneline, 'Kişisel Dosya Alanı' sekmesine girmelisiniz, ve Küçük Resim oluşturmayı ayarlayın = 'Kapalı'.";
 
 /* ====== Pages ====== */
 
