@@ -79,9 +79,9 @@ if ($f=='search' && mb_strlen($y)>1)
 	{
 	$sq = $y;
 	$title .= $cfg['separator']." ". $L['Search']." '".sed_cc($y)."'";
-	$sql = sed_sql_query("SELECT COUNT(*) FROM $db_users WHERE user_name LIKE '%".sed_sql_prep($y)."%' OR user_email LIKE '%".sed_sql_prep($y)."%' $sql_where");
+	$sql = sed_sql_query("SELECT COUNT(*) FROM $db_users WHERE user_name LIKE '%".sed_sql_prep($y)."%' $sql_where");
 	$totalusers = sed_sql_result($sql, 0, "COUNT(*)");
-	$sql = sed_sql_query("SELECT * FROM $db_users WHERE user_name LIKE '%".sed_sql_prep($y)."%' OR user_email LIKE '%".sed_sql_prep($y)."%' $sql_where ORDER BY user_$s $w LIMIT $d,".$cfg['maxusersperpage']);
+	$sql = sed_sql_query("SELECT * FROM $db_users WHERE user_name LIKE '%".sed_sql_prep($y)."%' $sql_where ORDER BY user_$s $w LIMIT $d,".$cfg['maxusersperpage']);
 	}
 elseif ($g > 1)
 	{

@@ -11,7 +11,7 @@ Updated=2022-jun-12
 Type=Skin
 Name=Sympfy
 Author=Amro
-Url=https://seditiocms.com
+Url=https://seditio.org
 Description=Official skin
 [END_SED]
 ==================== */

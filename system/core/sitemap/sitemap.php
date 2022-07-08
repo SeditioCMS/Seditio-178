@@ -3,7 +3,7 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditiocms.com
+https://seditio.org
 [BEGIN_SED]
 File=sitemap.php
 Version=178
@@ -23,6 +23,7 @@ $z = 'sitemap';
 require(SED_ROOT . '/system/functions.php');
 @include('datas/config.php');
 require(SED_ROOT . '/system/common.php');
+
 require(SED_ROOT . '/system/core/sitemap/sitemap.inc.php');
 
 ?>

@@ -6,7 +6,7 @@ The engine distinguishes itself from other content management systems by keeping
 This allows graphic designers to create skins without having to know much PHP. Seditio can be skinned by editing pre-made skins 
 supplied by the community, or easily making one's own by creating a template, and simply substituting for the TPL tags.
 
-<h2>Gereksinimler</h2>
+<h2>Requirements</h2>
 
 To install Seditio you need the following server software pre-installed:
 
@@ -16,7 +16,7 @@ To install Seditio you need the following server software pre-installed:
 <li>MySQL 5.0.7 or higher</li>
 </ul>
 
-<h2>Sunucu yapılandırması</h2>
+<h2>Server configuration</h2>
 
 <p>You MUST ensure that PHP has been compiled with support for:</p>
 
@@ -29,7 +29,7 @@ To install Seditio you need the following server software pre-installed:
 <li>Sessions</li>
 </ul>
 
-<h2>Kurulum</h2>
+<h2>Installation</h2>
 
 <p>1. Copy all files of the engine in the root directory or subdirectory</p>
 
