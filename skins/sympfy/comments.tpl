@@ -1,9 +1,12 @@
 <!-- BEGIN: COMMENTS -->
 
+
 <!-- BEGIN: COMMENTS_EMPTY -->
+
 	<div class="block">
 		{COMMENTS_EMPTYTEXT}
 	</div>
+
 <!-- END: COMMENTS_EMPTY -->
 
 <div class="commentlist">
@@ -83,9 +86,11 @@
 <!-- END: COMMENTS_EDITCOMMENT -->
 
 <!-- BEGIN: COMMENTS_DISABLE -->
+
 	<div class="block">
 		{COMMENTS_DISABLETEXT}
 	</div>
+
 <!-- END: COMMENTS_DISABLE -->
 
 <!-- END: COMMENTS -->

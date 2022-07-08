@@ -3,7 +3,7 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditiocms.com
+https://seditio.org
 [BEGIN_SED]
 File=system/functions.php
 Version=178
@@ -67,8 +67,10 @@ $cfg['version'] = '178';
 $cfg['versions_list'] = array (120, 121, 125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178);
 $cfg['group_colors'] = array ('red', 'yellow', 'black', 'blue', 'white', 'green', 'gray', 'navy', 'darkmagenta', 'pink', 'cadetblue', 'linen', 'deepskyblue', 'inherit');
 $cfg['separator_symbol'] = "&raquo;";
+
 $cfg['available_image_sizes'] = array(); // array("800x600", "400x300");
-$cfg['adminskin'] = "sympfy";
+
+$cfg['adminskin'] = "simple";
 
 /* Message type:  attention => a, error => e, success => s, information => i */
 $cfg['msgtype'] = array('100' => 'e', '101' => 'e', '102' => 'i', '104' => 'i', '105' => 's', '106' => 's', '109' => 's', '113' => 's', '117' => 'i', '118' => 's', '151' => 'e', 
@@ -2771,12 +2773,12 @@ function sed_hextorgb($colour)
  * @param  string $keywords Value meta keywords
  * @return string $result
  */
-function sed_htmlmetas($description = '', $keywords = '')
+function sed_htmlmetas($description = '', $keywords = '', $contenttype = 'text/html')
 	{
 	global $cfg, $sys;
-	$contenttype = "text/html";
-	$description = (empty($description)) ? $cfg['subtitle'] : $description;
-	$keywords = (empty($keywords)) ? $cfg['metakeywords'] : $keywords;
+	
+	$description = (empty($description)) ? $cfg['subtitle'] : htmlspecialchars($description);
+	$keywords = (empty($keywords)) ? $cfg['metakeywords'] : htmlspecialchars($keywords);
 	
 	$result = "<base href=\"".$sys['abs_url']."\" />
 <meta http-equiv=\"content-type\" content=\"".$contenttype."; charset=".$cfg['charset']."\" />
@@ -4785,6 +4787,8 @@ function sed_skinfile($base, $adminskin = false)
 	{
 	global $usr, $cfg;
 	$base_depth = is_array($base) ? count($base) : 1;
+	
+  
 	$tpl_path = SED_ROOT . '/skins/'.$usr['skin'].'/'.$base.'.tpl';
 	$tpl_admin_path = SED_ROOT . '/system/adminskin/'.$cfg['adminskin'].'/'.$base.'.tpl';  
 	$tpl_admin_path = (file_exists($tpl_admin_path)) ? $tpl_admin_path : $tpl_path;
@@ -5216,7 +5220,8 @@ function sed_sefurlredirect()
 
 /** 
  * Captcha value & answer time write to $_SESSION
- *   
+ * 
+ * @param string $code Code 
  */
 function sed_session_write($code)
     {      
@@ -5226,7 +5231,8 @@ function sed_session_write($code)
 	
 /** 
  * Captcha field name write to $_SESSION
- *   
+ *
+ * @param string $code Code
  */	
 function sed_session_field_write($code)
     {
@@ -5289,7 +5295,7 @@ function sed_userisonline($id)
  * @param int $wrap Wrapping boundary 
  * @return string 
  */ 
-function sed_wraptext($str,$wrap=128)
+function sed_wraptext($str, $wrap = 128)
 	{
 	if (!empty($str))
 		{ $str = preg_replace("/([^\n\r ?&\.\/<>\"\\-]{80})/i"," \\1\n", $str); }
@@ -5320,8 +5326,10 @@ function sed_xp()
   
 /** 
  * Get extra field for table 
- */  
- 
+ * 
+ * @param string $sql_table SQL Table name
+ * @return array 
+ */ 
 function sed_extrafield_get($sql_table) 
 { 
     global $sed_dic, $cfg;
@@ -5340,9 +5348,12 @@ function sed_extrafield_get($sql_table)
 	return $res; 
 } 
 
-/** 
+ /** 
  * Build vars if data is ARRAY? convert to type TXT 
- */  
+ * 
+ * @param array $data Array 
+ * @return array 
+ */ 
 function sed_array_buildvars($data)
 {
 	$res = array();
