@@ -418,25 +418,26 @@ $L['adm_poll_title'] = "Poll title";
 
 /* ====== Statistics ====== */
 
-$L['adm_phpver'] = "PHP engine version";
-$L['adm_zendver'] = "Zend engine version";
-$L['adm_interface'] = "Interface between webserver and PHP";
-$L['adm_os'] = "Operating system";
-$L['adm_clocks'] = "Clocks";
-$L['adm_time1'] = "#1 : Raw server time";
-$L['adm_time2'] = "#2 : GMT time returned by the server";
-$L['adm_time3'] = "#3 : GMT time + server offset (Seditio reference)";
-$L['adm_time4'] = "#4 : Your local time, adjusted from your profile";
-$L['adm_help_versions'] = "Adjust the Server time zone to have the clock #3 properlly set.<br />Clock #4 depends of the timezone setting in your profile.<br />Clocks #1 and #2 are ignored by Seditio.";
-$L['adm_log'] = "System log";
-$L['adm_infos'] = "Informations";
-$L['adm_versiondclocks'] = "Versions and clocks";
-$L['adm_checkcoreskins'] = "Check core files and skins";
-$L['adm_checkcorenow'] = "Check core files now !";
-$L['adm_checkingcore'] = "Checking core files...";
-$L['adm_checkskins'] = "Check if all files are present in skins";
-$L['adm_checkskin'] = "Check TPL files for the skin";
-$L['adm_checkingskin'] = "Checking the skin...";
+$L['adm_phpver'] = "PHP sürümü";
+$L['adm_zendver'] = "Zend sürümü";
+$L['adm_interface'] = "Web sunucusu ve PHP arasındaki arayüz";
+$L['adm_os'] = "İşletim sistemi";
+$L['adm_clocks'] = "Saatler";
+$L['adm_time1'] = "#1 : Ham sunucu zamanı";
+$L['adm_time2'] = "#2 : Sunucu tarafından döndürülen GMT zamanı";
+$L['adm_time3'] = "#3 : GMT zamanı + sunucu ofseti (Seditio referansı)";
+$L['adm_time4'] = "#4 : Profilinizden ayarlanan yerel saatiniz";
+$L['adm_help_versions'] = "3 numaralı saatin doğru şekilde ayarlanması için Sunucu saat dilimini ayarlayın.<br />
+4 numaralı saat, profilinizdeki saat dilimi ayarına bağlıdır.<br />1 ve 2 numaralı saatler Seditio tarafından yok sayılır.";
+$L['adm_log'] = "Sistem günlüğü";
+$L['adm_infos'] = "Bilgiler";
+$L['adm_versiondclocks'] = "Sürümler ve saatler";
+$L['adm_checkcoreskins'] = "Çekirdek dosyaları ve dış görünümleri kontrol edin";
+$L['adm_checkcorenow'] = "Çekirdek dosyaları şimdi kontrol edin !";
+$L['adm_checkingcore'] = "Çekirdek dosyaları kontrol ediliyor...";
+$L['adm_checkskins'] = "Tüm tema dosyalarının var olduğunu kontrol edin";
+$L['adm_checkskin'] = "Tema için TPL dosyalarını kontrol edin";
+$L['adm_checkingskin'] = "Tema kontrol ediliyor...";
 $L['adm_hits'] = "Hits";
 $L['adm_check_ok'] = "Ok";
 $L['adm_check_missing'] = "Missing";
@@ -448,29 +449,32 @@ $L['adm_byweek'] = "By week";
 
 /* ====== Ratings ====== */
 
-$L['adm_ratings_totalitems'] = "Total pages rated";
-$L['adm_ratings_totalvotes'] = "Total votes";
-$L['adm_help_ratings'] = "To reset a rating, simply delete it. It will be re-created with the first new vote.";
+$L['adm_ratings_totalitems'] = "Puanlanan toplam sayfa sayısı";
+$L['adm_ratings_totalvotes'] = "Toplam oy";
+$L['adm_help_ratings'] = "Bir derecelendirmeyi sıfırlamak için silmeniz yeterlidir. İlk yeni oylama ile yeniden oluşturulacak.";
 
 /* ====== Trash can ====== */
 
-$L['adm_help_trashcan'] = "Here are listed the items recently deleted by the users and moderators.<br />Note that restoring a forum topic will also restore all the posts that belongs to the topic.<br />And restoring a post in a deleted topic will restore the whole topic (if available) and all the child posts.<br />&nbsp;<br />Wipe : Delete the item forever.<br />Restore : Put the item back in the live database."; 
+$L['adm_help_trashcan'] = "Kullanıcılar ve moderatörler tarafından en son silinen öğeler burada listelenmiştir..
+<br />Bir forum konusunu geri yüklemenin, konuya ait tüm gönderileri de geri yükleyeceğini unutmayın..<br />
+Silinen bir konudaki bir gönderiyi geri yüklemek, tüm konuyu (varsa) ve tüm alt gönderileri geri yükleyecektir..
+<br />&nbsp;<br />Sil : Öğeyi sonsuza kadar sil.<br />Eski haline getir : Öğeyi veritabanına geri koyun."; 
 
 /* ====== Users ====== */
 
-$L['adm_defauth_members'] = "Default rights for the members";
-$L['adm_deflock_members'] = "Lock mask for the members";
-$L['adm_defauth_guests'] = "Default rights for the guests";
-$L['adm_deflock_guests'] = "Lock mask for the guests";
-$L['adm_rightspergroup'] = "Rights per group";
-$L['adm_copyrightsfrom'] = "Set the same rights as the group";
-$L['adm_maxsizesingle'] = "PFS max size for a single file (KB)";
-$L['adm_maxsizeallpfs'] = "Max size of all PFS files together (KB)";
-$L['adm_rights_allow10'] = "Allowed";
-$L['adm_rights_allow00'] = "Denied";
-$L['adm_rights_allow11'] = "Allowed and locked for security reasons";
-$L['adm_rights_allow01'] = "Denied and locked for security reasons";
-$L['adm_color'] = "Color for group"; // New in v175
+$L['adm_defauth_members'] = "Üyeler için varsayılan haklar";
+$L['adm_deflock_members'] = "Üyeler için maskeyi kilitle";
+$L['adm_defauth_guests'] = "Misafirler için varsayılan haklar";
+$L['adm_deflock_guests'] = "Misafirler için maskeyi kilitle";
+$L['adm_rightspergroup'] = "Grup başına haklar";
+$L['adm_copyrightsfrom'] = "Grupla aynı hakları ayarlayın";
+$L['adm_maxsizesingle'] = "Tek bir dosya için maksimum PFS boyutu (KB)";
+$L['adm_maxsizeallpfs'] = "Tüm PFS dosyalarının maksimum boyutu (KB)";
+$L['adm_rights_allow10'] = "İzin verildi";
+$L['adm_rights_allow00'] = "Reddedildi";
+$L['adm_rights_allow11'] = "Güvenlik nedeniyle izin verildi ve kilitlendi";
+$L['adm_rights_allow01'] = "Güvenlik nedeniyle reddedildi ve kilitlendi";
+$L['adm_color'] = "Grup için renk"; // New in v175
 
 /* ====== Plugins ====== */
 
