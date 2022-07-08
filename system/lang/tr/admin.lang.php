@@ -60,46 +60,46 @@ $L['upg_force'] = "Bazı nedenlerden dolayı SQL veritabanında yazılan Seditio
 
 /* ====== General ====== */
 
-$L['editdeleteentries'] = "Edit or delete entries";
-$L['viewdeleteentries'] = "View or delete entries";
-$L['addnewentry'] = "Add a new entry";
-$L['adm_purgeall'] = "Purge all";
-$L['adm_listisempty'] = "List is empty";
-$L['adm_totalsize'] = "Total size";
-$L['adm_showall'] = "Show all";
-$L['adm_area'] = "Area";
-$L['adm_option'] = "Option";
-$L['adm_setby'] = "Set by";
-$L['adm_more'] = "More tools...";
+$L['editdeleteentries'] = "Girişleri düzenleyin veya silin";
+$L['viewdeleteentries'] = "Girişleri görüntüleyin veya silin";
+$L['addnewentry'] = "Yeni bir giriş ekle";
+$L['adm_purgeall'] = "Tümünü temizle";
+$L['adm_listisempty'] = "Liste boş";
+$L['adm_totalsize'] = "Toplam boyut";
+$L['adm_showall'] = "Hepsini Göster ↓";
+$L['adm_area'] = "Alan";
+$L['adm_option'] = "Seçenek";
+$L['adm_setby'] = "Olarak ayarla";
+$L['adm_more'] = "Daha fazla araç...";
 $L['adm_from'] = "From";
 $L['adm_to'] = "To";
-$L['adm_confirm'] = "Press this button to confirm : ";
-$L['adm_done'] = "Done";
-$L['adm_failed'] = "Failed";
-$L['adm_warnings'] = "Warnings";
-$L['adm_valqueue'] = "Waiting for validation";
-$L['adm_required'] = "(Required)";
-$L['adm_clicktoedit'] = "(Click to edit)";
-$L['adm_manage'] = "Manage";  // New in v150
-$L['adm_pagemanager'] = "Page manager";  // New in v177
-$L['adm_module_name'] = "Module name";  // New in v178
-$L['adm_tool_name'] = "Tool name";  // New in v178
+$L['adm_confirm'] = "Onaylamak için bu düğmeye basın : ";
+$L['adm_done'] = "Tamamlandı";
+$L['adm_failed'] = "Arızalı";
+$L['adm_warnings'] = "Uyarılar";
+$L['adm_valqueue'] = "Doğrulama bekleniyor";
+$L['adm_required'] = "(Gerekli)";
+$L['adm_clicktoedit'] = "(Düzenlemek için tıkla)";
+$L['adm_manage'] = "Yönet";  // New in v150
+$L['adm_pagemanager'] = "Sayfa yöneticisi";  // New in v177
+$L['adm_module_name'] = "Modül Adı";  // New in v178
+$L['adm_tool_name'] = "Araç adı";  // New in v178
 
 /* ====== Banlist ====== */
 
-$L['adm_ipmask'] = "IP mask";
-$L['adm_emailmask'] = "Email mask";
-$L['adm_neverexpire'] = "Never expire";
-$L['adm_help_banlist'] = "Samples for IP masks :194.31.13.41 , 194.31.13.* , 194.31.*.* , 194.*.*.*<br />Samples for email masks : @hotmail.com, @yahoo (Wildcards are not supported)<br />A single entry can contain one IP mask or one email mask or both.<br />IPs are filtered for each and every page displayed, and email masks at user registration only.";
+$L['adm_ipmask'] = "IP maskesi";
+$L['adm_emailmask'] = "Email maskesi";
+$L['adm_neverexpire'] = "Süresiz";
+$L['adm_help_banlist'] = "IP maskeleri için örnekler :194.31.13.41 , 194.31.13.* , 194.31.*.* , 194.*.*.*<br />E-posta maskeleri için örnekler : @hotmail.com, @yahoo (Joker karakterler desteklenmez)<br />Tek bir giriş, bir IP maskesi veya bir e-posta maskesi veya her ikisini birden içerebilir.<br />IP'ler, görüntülenen her sayfa için filtrelenir ve e-posta maskeleri yalnızca kullanıcı kaydı sırasında.";
 
 /* ====== Cache ====== */
 
-$L['adm_internalcache'] = "Internal cache";
-$L['adm_help_cache'] = "Not available";
+$L['adm_internalcache'] = "Dahili önbellek";
+$L['adm_help_cache'] = "Müsait değil";
 
 /* ====== Configuration ====== */
 
-$L['adm_help_config']= "Not available";
+$L['adm_help_config']= "Müsait değil";
 $L['cfg_adminemail'] = array("Administrator's email", "Required");
 $L['cfg_maintitle'] = array("Site title", "Main title for the website, required");
 $L['cfg_subtitle'] = array("Description", "Optional, will be displayed after the title of the site");
@@ -474,26 +474,26 @@ $L['adm_color'] = "Color for group"; // New in v175
 
 /* ====== Plugins ====== */
 
-$L['adm_extplugins'] = "Extended plugins";
-$L['adm_present'] = "Present";
-$L['adm_missing'] = "Missing";
-$L['adm_paused'] = "Paused";
-$L['adm_running'] = "Running";
-$L['adm_partrunning'] = "Partially running";
-$L['adm_notinstalled'] = "Not installed";
+$L['adm_extplugins'] = "Genişletilmiş eklentiler";
+$L['adm_present'] = "Mevcut";
+$L['adm_missing'] = "Eksik";
+$L['adm_paused'] = "Duraklatıldı";
+$L['adm_running'] = "Çalışan";
+$L['adm_partrunning'] = "Kısmen çalışıyor";
+$L['adm_notinstalled'] = "Yüklü değil";
 
-$L['adm_opt_installall'] = "Install all";
-$L['adm_opt_installall_explain'] = "This will install or reset all the parts of the plugin.";
-$L['adm_opt_uninstallall'] = "Un-install all";
-$L['adm_opt_uninstallall_explain'] = "This will disable all the parts of the plugin, but won't physically remove the files.";
-$L['adm_opt_pauseall'] = "Pause all";
-$L['adm_opt_pauseall_explain'] = "This will pause (disable) all the parts of the plugin.";
-$L['adm_opt_unpauseall'] = "Un-pause all";
-$L['adm_opt_unpauseall_explain'] = "This will un-pause (enable) all the parts of the plugin.";
+$L['adm_opt_installall'] = "Hepsini yükle";
+$L['adm_opt_installall_explain'] = "Bu, eklentinin tüm parçalarını yükleyecek veya sıfırlayacaktır..";
+$L['adm_opt_uninstallall'] = "Hepsini kaldır";
+$L['adm_opt_uninstallall_explain'] = "Bu, eklentinin tüm bölümlerini devre dışı bırakır, ancak dosyaları fiziksel olarak kaldırmaz.";
+$L['adm_opt_pauseall'] = "Hepsini durdur";
+$L['adm_opt_pauseall_explain'] = "Bu, eklentinin tüm bölümlerini duraklatacak (devre dışı bırakacaktır).";
+$L['adm_opt_unpauseall'] = "Tümünü çalıştır";
+$L['adm_opt_unpauseall_explain'] = "Bu, eklentinin tüm bölümlerini çalıştıracak (etkinleştirecek).";
 
 /* ====== Private messages ====== */
 
-$L['adm_pm_totaldb'] = "Private messages in the database";
-$L['adm_pm_totalsent'] = "Total of private messages ever sent";
+$L['adm_pm_totaldb'] = "Veritabanındaki özel mesajlar";
+$L['adm_pm_totalsent'] = "Şimdiye kadar gönderilen toplam özel mesaj";
 
 ?>
