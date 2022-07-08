@@ -21,27 +21,27 @@ Description=Admin panel
 
 /* ====== Core ====== */
 
-$L['core_main'] = "Main setup";
-$L['core_parser'] = "Parser"; 			// New in v120
-$L['core_rss'] = "RSS feeds"; 			// New in v173
-$L['core_dic'] = "Directories & Extra fields"; 			// New in v173
-$L['core_time'] = "Time and date";
-$L['core_skin'] = "Skins";
-$L['core_lang'] = "Languages";
-$L['core_menus'] = "Menu slots";
-$L['core_comments'] = "Comments";
-$L['core_forums'] = "Forums";
-$L['core_page'] = "Pages";
-$L['core_pfs'] = "Personal file space";
-$L['core_gallery'] = "Gallery";
-$L['core_plug'] = "Plugins";
-$L['core_pm'] = "Private messages";
-$L['core_polls'] = "Polls";
-$L['core_ratings'] = "Ratings";
-$L['core_trash'] = "Trash can";
-$L['core_users'] = "Users";
+$L['core_main'] = "Ana kurulum";
+$L['core_parser'] = "Ayrıştırıcı"; 			// New in v120
+$L['core_rss'] = "RSS beslemeleri"; 			// New in v173
+$L['core_dic'] = "Dizinler ve Ekstra alanlar"; 			// New in v173
+$L['core_time'] = "Saat ve tarih";
+$L['core_skin'] = "Temalar";
+$L['core_lang'] = "Diller";
+$L['core_menus'] = "Menü yuvaları";
+$L['core_comments'] = "Yorumlar";
+$L['core_forums'] = "Forumlar";
+$L['core_page'] = "Sayfalar";
+$L['core_pfs'] = "Kişisel dosya alanı";
+$L['core_gallery'] = "Galeri";
+$L['core_plug'] = "Eklentiler";
+$L['core_pm'] = "ÖZel mesajlar";
+$L['core_polls'] = "Anketler";
+$L['core_ratings'] = "Oylamalar";
+$L['core_trash'] = "Çöp Kutusu";
+$L['core_users'] = "Üyeler";
 $L['core_meta'] = "HTML Meta";
-$L['core_menu'] = "Menu manager"; // New in v178
+$L['core_menu'] = "Menü yöneticisi"; // New in v178
 
 /* ====== Upgrade ====== */
 
