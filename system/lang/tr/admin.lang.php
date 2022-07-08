@@ -45,18 +45,18 @@ $L['core_menu'] = "Menü yöneticisi"; // New in v178
 
 /* ====== Upgrade ====== */
 
-$L['upg_upgrade'] = "Upgrade";      // New in v130
-$L['upg_codeversion'] = "Code version";     // New in v130
-$L['upg_sqlversion'] = "SQL database version";    // New in v130
-$L['upg_codeisnewer'] = "The code is newer than the SQL  version.";    // New in v130
-$L['upg_codeisolder'] = "The code is older than the SQL  version, this is unusual, and not supported.<br />You should double check that you uploaded all the files from the newest package.";    // New in v130
-$L['upg_codeissame'] = "The code and SQL versions are matching.";    // New in v130
-$L['upg_upgradenow'] = "It is highly recommended to upgrade the SQL database right now, click here to upgrade !";    // New in v130
-$L['upg_upgradenotavail'] = "There's no upgrade available for these version numbers.";       // New in v130
-$L['upg_manual'] = "If you prefer to manually upgrade the database, the SQL scripts are in the folder /docs/upgrade/.";       // New in v130
-$L['upg_success'] = "The upgrade was successful, click here to continue...";       // New in v130
-$L['upg_failure'] = "The upgrade failed, click here to continue...";       // New in v130
-$L['upg_force'] = "For some reasons, it may happen that the Seditio version number written in the SQL database is wrong. Below is a button to force the SQL version number, this will only tag the SQL database, it will NOT perform any other change.<br />Force the SQL version number to : ";	// New in v130
+$L['upg_upgrade'] = "Güncelleme";      // New in v130
+$L['upg_codeversion'] = "Kod sürümü";     // New in v130
+$L['upg_sqlversion'] = "SQL veritabanı sürümü";    // New in v130
+$L['upg_codeisnewer'] = "Kod, SQL sürümünden daha yeni.";    // New in v130
+$L['upg_codeisolder'] = "Kod SQL sürümünden daha eski, bu olağandışı ve desteklenmiyor.<br />Tüm dosyaları en yeni paketten yüklediğinizi iki kez kontrol etmelisiniz..";    // New in v130
+$L['upg_codeissame'] = "Kod ve SQL sürümleri eşleşiyor.";    // New in v130
+$L['upg_upgradenow'] = "SQL veritabanını hemen yükseltmeniz şiddetle tavsiye edilir, yükseltmek için buraya tıklayın !";    // New in v130
+$L['upg_upgradenotavail'] = "Bu sürüm numaraları için yükseltme yok.";       // New in v130
+$L['upg_manual'] = "Veritabanını manuel olarak yükseltmeyi tercih ederseniz, SQL komut dosyaları klasördedir. /docs/upgrade/.";       // New in v130
+$L['upg_success'] = "Yükseltme başarılı oldu, devam etmek için burayı tıklayın...";       // New in v130
+$L['upg_failure'] = "Yükseltme başarısız oldu, devam etmek için burayı tıklayın...";       // New in v130
+$L['upg_force'] = "Bazı nedenlerden dolayı SQL veritabanında yazılan Seditio sürüm numarası yanlış olabilir. Aşağıda SQL sürüm numarasını zorlamak için bir düğme bulunmaktadır, bu yalnızca SQL veritabanını etiketleyecektir, başka bir değişiklik YAPMAYACAKTIR.<br />SQL sürüm numarasını zorla : ";	// New in v130
 
 /* ====== General ====== */
 
