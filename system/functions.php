@@ -1034,8 +1034,14 @@ function sed_build_forums($sectionid, $title, $category, $link = true, $parentca
 	
 /** 
  * Forums breadcrumbs build path arr
-*/ 
-function sed_build_forums_bc($sectionid, $title, $category, $link = true, $parentcat = false)
+ *
+ * @param int $sectionid Forum section id
+ * @param string $title Title  
+ * @param string $category Category code  
+ * @param string $cat Category code  
+ * @param string $cat Category code   
+*/
+function sed_build_forums_bc($sectionid, $title, $category, $parentcat = false)
 	{
 	global $sed_forums_str, $cfg, $urlpaths;
 	
@@ -1046,7 +1052,7 @@ function sed_build_forums_bc($sectionid, $title, $category, $link = true, $paren
 		$urlpaths[sed_url("forums", "c=".$x, "#".$x)] = sed_cc($sed_forums_str[$x]['title']); 
 		}
 			
-	if(is_array($parentcat))
+	if (is_array($parentcat))
 		{
 		$urlpaths[sed_url("forums", "m=topics&s=".$parentcat['sectionid'])] = sed_cc($parentcat['title']);
 		}
@@ -1056,6 +1062,8 @@ function sed_build_forums_bc($sectionid, $title, $category, $link = true, $paren
 	
 /** 
  * List breadcrumbs build path arr
+ *
+ * @param string $cat Category code  
 */ 	
 function sed_build_list_bc($cat)
 	{
@@ -1440,8 +1448,7 @@ function sed_build_ratings($code, $url, $display, $allow = true)
 		"RATINGS_VOTERS" => $rating_voters,
 		"RATINGS_SINCE" => $rating_since
 	));
-	
-	
+		
 	if ($usr['id']>0 && $votedcasted && $allow)
 		{
 		$t->assign(array(
@@ -1668,12 +1675,14 @@ function sed_br2nl($text)
 	}
 	
 /** 
- * Build breadcrumbs from array 
+ * Build breadcrumbs 
  * 
- * @param array $urlpaths urls arr
- */ 	
-	
-function sed_breadcrumbs($urlpaths, $startpos = 1, $home = true, $part = "MAIN")
+ * @global array $urlpaths Urls and titles array
+ * @global int $startpos Position 
+ * @param bool $home Home link flag 
+ * @return string 
+ */ 
+function sed_breadcrumbs($urlpaths, $startpos = 1, $home = true)
 	{
 		global $L, $t;
 		
@@ -3003,7 +3012,6 @@ function sed_image_resize($img_big, $img_small, $small_x, $extension, $jpegquali
  * @param bool $dieonerror Die with fatal error on wrong input 
  * @return mixed 
  */ 
- 
 function sed_import($name, $source, $filter, $maxlen=0, $dieonerror=FALSE)
 	{
   global $cfg;
@@ -3238,11 +3246,12 @@ function sed_infoget($file, $limiter='SED', $maxsize=32768)
  * @param bool $checked Checked flag 
  * @return string 
  */ 
-function sed_radio_item($name, $value, $title = '', $id = '', $checked = false)
+function sed_radio_item($name, $value, $title = '', $id = '', $checked = false, $onclick = "")
 	{	
 	$id = (empty($id)) ? $name : $name."_".$id;
-	$checked = ($checked) ? " checked" : "";		
-	$result = "<span class=\"radio-item\"><input type=\"radio\" class=\"radio\" id=\"".$id."\" name=\"".$name."\" value=\"".$value."\"".$checked." /><label for=\"".$id."\">".$title."</label></span>";
+	$checked = ($checked) ? " checked" : "";	
+	$onclick = ($onclick) ? " onclick=\"".$onclick."\"" : "";		
+	$result = "<span class=\"radio-item\"><input type=\"radio\" class=\"radio\" id=\"".$id."\" name=\"".$name."\" value=\"".$value."\"".$checked.$onclick." /><label for=\"".$id."\">".$title."</label></span>";
 	return($result);
 	}	
 
@@ -3254,7 +3263,6 @@ function sed_radio_item($name, $value, $title = '', $id = '', $checked = false)
  * @param bool $check Checked flag  
  * @return string 
  */ 	
-
 function sed_radiobox($name, $data, $check_data = '')
 	{
 	if (is_array($data))  
@@ -3278,8 +3286,7 @@ function sed_radiobox($name, $data, $check_data = '')
  * 
  * @param string $text Text
  * @return string 
- */ 	
-	
+ */ 		
 function sed_rel2abs($text)
 	{
 	global $cfg;
@@ -3294,7 +3301,7 @@ function sed_rel2abs($text)
  * @return string 
  */ 	
 function sed_translit_seourl($value)
-{
+	{
 	global $sed_translit;
  
 	$value = mb_strtolower($value);
@@ -3306,57 +3313,67 @@ function sed_translit_seourl($value)
 	$value = str_replace('-.', '.', $value);
 	 
 	return $value;
-}	
+	}	
 	
-
 /** 
  * Creating input field text
  * 
+ * @param string $name Name input tag 
+ * @param string $value Value textarea tag
+ * @param int $size Input size
+ * @param int $maxlength Input max size
+ * @param string $class Css class
+ * @param bool $disabled Disabled flag 
+ * @param string $type Input type  
  * @return string 
- */  
+ */ 
+ 
 function sed_textbox($name, $value, $size = 56, $maxlength = 255, $class = "text", $disabled = false, $type = "text")
-{
-  if ($disabled) $add_disabled = " disabled=\"disabled\"";
-  $res = "<input type=\"".$type."\" class=\"".$class."\" name=\"".$name."\" value=\"".sed_cc($value)."\" size=\"".$size."\" maxlength=\"".$maxlength."\"".$add_disabled." />";
-  return($res);
-} 
+	{
+	if ($disabled) $add_disabled = " disabled=\"disabled\"";
+	$res = "<input type=\"".$type."\" class=\"".$class."\" name=\"".$name."\" value=\"".sed_cc($value)."\" size=\"".$size."\" maxlength=\"".$maxlength."\"".$add_disabled." />";
+	return($res);
+	}
 
 function sed_textbox_hidden($name, $value, $size = 56, $maxlength = 255, $class = "text", $disabled = false)
-{
-  if ($disabled) $add_disabled = " disabled=\"disabled\"";
-  $res = "<input type=\"hidden\" class=\"".$class."\" name=\"".$name."\" value=\"".sed_cc($value)."\" size=\"".$size."\" maxlength=\"".$maxlength."\"".$add_disabled." />";
-  return($res);
-} 
+	{
+	sed_textbox($name, $value, $size, $maxlength, $class, $disabled, 'hidden');
+	} 
 
 /** 
  * Creating field textarea
  * 
+ * @param string $name Name input tag 
+ * @param string $value Value textarea tag
+ * @param int $rows Count of rows
+ * @param int $cols Count of cols
+ * @param string $editor Toolbar for wysiwyg editor
+ * @param bool $disabled Disabled flag  
  * @return string 
- */
- 
+ */ 
 function sed_textarea($name, $value, $rows, $cols, $editor = "noeditor")
-{
-  global $cfg;
-  $rows = (empty($rows)) ? $cfg['textarea_default_height'] : $rows;
-  $cols = (empty($cols)) ? $cfg['textarea_default_width'] : $cols;
-  $res = "<textarea name=\"".$name."\" rows=\"".$rows."\" cols=\"".$cols."\" data-editor=\"".$editor."\">".sed_cc(sed_checkmore($value, false), ENT_QUOTES)."</textarea>";
-  return($res);
-} 
+	{
+	global $cfg;
+	$rows = (empty($rows)) ? $cfg['textarea_default_height'] : $rows;
+	$cols = (empty($cols)) ? $cfg['textarea_default_width'] : $cols;
+	$res = "<textarea name=\"".$name."\" rows=\"".$rows."\" cols=\"".$cols."\" data-editor=\"".$editor."\">".sed_cc(sed_checkmore($value, false), ENT_QUOTES)."</textarea>";
+	return($res);
+	} 
 
 /** 
  * Creating input field checkbox
  * 
  * @param string $name Name input tag 
- * @param array $data Value input tag
- * @param bool $check Checked flag  
+ * @param array $data Value(s) checkbox input tag
+ * @param array $check_data Checked value(s) checkbox input tag
+ * @param bool $disabled Disabled flag  
  * @return string 
  */ 
-
 function sed_checkbox($name, $data = '', $check_data = FALSE, $disabled = FALSE)
 	{	
 	if (empty($data) || !is_array($data))
     {
-       $val = (empty($data)) ? "1" : "";
+       $val = (empty($data)) ? "1" : $data;
 	   
 	   $checked = ($check_data) ? " checked" : "";
 	   $disabled = ($disabled) ? " disabled" : "";	   
@@ -5381,8 +5398,14 @@ function sed_extrafield_buildvar($extrafields, $var_prefix, $table_prefix)
     return $res;
 }     
 	
-/** 
- * Add extra field 
+/**
+ * Add extra field for pages
+ *
+ * @param string $sql_table Table for adding extrafield (without sed_)
+ * @param string $name Field name (unique)
+ * @param string $type Field type (input, textarea etc)
+ * @param string $size Field size
+ * @return bool
  */
 function sed_extrafield_add($sql_table, $name, $type, $size) 
 { 
@@ -5439,9 +5462,15 @@ function sed_extrafield_add($sql_table, $name, $type, $size)
     return TRUE;
 } 
 
-/** 
+/**
  * Update extra field
- */ 
+ *
+ * @param string $sql_table Table contains extrafield (without sed_)
+ * @param string $name Field name (unique)
+ * @param string $type Field type (input, textarea etc)
+ * @param string $size Field size
+ * @return bool
+ */
 function sed_extrafield_update($sql_table, $name, $type, $size) 
 { 
     global $db_dic, $cfg;
@@ -5480,9 +5509,13 @@ function sed_extrafield_update($sql_table, $name, $type, $size)
     return TRUE;
 } 
 
-/** 
- * Delete extra field 
- */ 
+/**
+ * Delete extra field
+ *
+ * @param string $sql_table Table contains extrafield (without sed_)
+ * @param string $name Name of extra field
+ * @return bool
+ */
 function sed_extrafield_remove($sql_table, $name) 
 { 
     global $db_dic, $cfg;
