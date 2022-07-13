@@ -504,16 +504,16 @@ $L['hea_mypfs'] = "My files"; // New in v175
 $L['hea_users'] = "Users"; // New in v175
 $L['hea_administration'] = "Administration";  // New in v175
 
-$L['hea_pageadd'] = "Add new page"; // New in v178
+$L['hea_pageadd'] = "Yeni sayfa ekle"; // New in v178
 
 /* ====== Footer ====== */
 
 $L['foo_poweredby'] = "Powered by";
-$L['foo_created'] = "Page created in";
-$L['foo_seconds'] = "seconds";
-$L['foo_sqlqueries'] = "SQL queries";
-$L['foo_sqltotal'] = "SQL total time";
-$L['foo_sqlaverage'] = "Average SQL time";
+$L['foo_created'] = "Sayfa oluşturulma süresi:";
+$L['foo_seconds'] = "saniye";
+$L['foo_sqlqueries'] = "SQL sorguları";
+$L['foo_sqltotal'] = "SQL toplam süresi";
+$L['foo_sqlaverage'] = "Ortalama SQL süresi";
 
 /* ====== Admin ====== */
 
@@ -521,57 +521,52 @@ $L['foo_sqlaverage'] = "Average SQL time";
 
 /* ====== Auth ====== */
 
-$L['aut_usernametooshort']= "The user name must be at least 2 chars long";
-$L['aut_passwordtooshort'] = "The password must be at least 4 chars long and must consist of alphanumerical characters and underscore only.";
-$L['aut_emailtooshort'] = "The email is not valid.";
-$L['aut_usernamealreadyindb'] = "The user name you provided is already in the database";
-$L['aut_emailalreadyindb'] = "The email you provided is already in the database";
-$L['aut_passwordmismatch'] = "The password fields do not match !";
-$L['aut_emailbanned'] = "This email (or this host) is banned, reason is : ";
-
-$L['aut_contactadmin'] = "If you have any difficulties please contact the board administrator";
-
-$L['aut_regrequesttitle'] = "Registration request";
-$L['aut_regrequest'] = "Hi %1\$s,\n\nYou are receiving this email because you have (or someone pretending to be you has) registered a new account on our website. If you did not request this email then please ignore it, if you keep receiving it please contact the site administrator. \n\nYour account is currently inactive, an administrator will need to activate it before you can log in. You will receive another email when this has occured. Then you will be able to login with : \n\nUsername = %1\$s \nPassword = %2\$s";
-
-$L['aut_regreqnoticetitle'] = "New account request";
-$L['aut_regreqnotice'] = "Hi,\n\nYou are receiving this email because %1\$s requested a new account.\nThis user won't be able to login until you manually set the account as 'active', here :\n\n %2\$s";
-
-$L['aut_emailreg'] = "Hi %1\$s,\n\nYou are receiving this email because you have (or someone pretending to be you has) registered a new account on our website. If you did not request this email then please ignore it, if you keep receiving it please contact the site administrator.\n\nTo use your account you need to activate it with this link :\n\n %3\$s \n\n Then you'll be able to login with : \n\nUsername = %1\$s \nPassword = %2\$s";
-
-$L['aut_registertitle'] = "Register a new member account";
+$L['aut_usernametooshort']= "Kullanıcı adı en az 2 karakter uzunluğunda olmalıdır";
+$L['aut_passwordtooshort'] = "Şifre en az 4 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterlerden ve alt çizgiden oluşmalıdır.";
+$L['aut_emailtooshort'] = "E-posta geçerli değil.";
+$L['aut_usernamealreadyindb'] = "Bu kullanıcı adı zaten veritabanında var";
+$L['aut_emailalreadyindb'] = "Bu e-posta zaten veritabanında var";
+$L['aut_passwordmismatch'] = "Şifre alanları eşleşmiyor !";
+$L['aut_emailbanned'] = "Bu e-posta (veya bu ana bilgisayar) yasaklandı, nedeni : ";
+$L['aut_contactadmin'] = "Herhangi bir zorluk yaşarsanız, lütfen site yöneticisiyle iletişime geçin.";
+$L['aut_regrequesttitle'] = "Kayıt talebi";
+$L['aut_regrequest'] = "Merhaba %1\$s,\n\nBu e-postayı, web sitemizde yeni bir hesap açmış olduğunuz (veya sizin gibi davranan biri) olduğu için alıyorsunuz. Bu e-postayı siz istemediyseniz lütfen dikkate almayın, almaya devam ederseniz lütfen site yöneticisiyle iletişime geçin.. \n\nHesabınız şu anda etkin değil, oturum açabilmeniz için bir yöneticinin hesabı etkinleştirmesi gerekecek. Bu gerçekleştiğinde başka bir e-posta alacaksınız. O zaman giriş yapabileceksiniz : \n\nÜye adı = %1\$s \nŞifre = %2\$s";
+$L['aut_regreqnoticetitle'] = "Yeni hesap isteği";
+$L['aut_regreqnotice'] = "Merhaba,\n\nBu e-postayı alıyorsunuz çünkü %1\$s yeni bir hesap istedi.\nBu kullanıcı, hesabı manuel olarak 'etkin' olarak ayarlayana kadar giriş yapamayacak, burada :\n\n %2\$s";
+$L['aut_emailreg'] = "Merhaba %1\$s,\n\nBu e-postayı, web sitemizde yeni bir hesap açmış olduğunuz (veya sizin gibi davranan biri) olduğu için alıyorsunuz.. Bu e-postayı siz istemediyseniz lütfen dikkate almayın, almaya devam ederseniz lütfen site yöneticisiyle iletişime geçin..\n\nHesabınızı kullanmak için bu bağlantıyla etkinleştirmeniz gerekir :\n\n %3\$s \n\n O zaman giriş yapabileceksiniz : \n\nÜye adı = %1\$s \nŞifre = %2\$s";
+$L['aut_registertitle'] = "Yeni üye hesabı kaydedin";
 $L['aut_registersubtitle'] = "";
-$L['aut_logintitle'] = "Login form";
+$L['aut_logintitle'] = "Giriş Formu";
 
 /* ====== Comments ====== */
 
-$L['com_disable'] = "Commenting is disabled!"; // New in v173
-$L['com_commenttooshort'] = "The comment is too short or missing";
-$L['com_commenttoolong'] = "The comment is too long";
-$L['com_commentadded'] = "Done, comment added";
-$L['com_regonly'] = "Only registered users can post new comments";
-$L['com_nocommentsyet'] = "No comments yet";
+$L['com_disable'] = "Yorum yapma devre dışı!"; // New in v173
+$L['com_commenttooshort'] = "Yorum çok kısa veya eksik";
+$L['com_commenttoolong'] = "Yorum çok uzun";
+$L['com_commentadded'] = "Bitti, yorum eklendi";
+$L['com_regonly'] = "Sadece kayıtlı kullanıcılar yorum gönderebilir";
+$L['com_nocommentsyet'] = "henüz yorum yok";
 $L['com_gup'] = " left";
-$L['com_commenteditallowtime'] = "Out occurred time allowed to edit a comment";
-$L['com_commentdeleteallowtime'] = "Out occurred time allowed to delete a comment";
+$L['com_commenteditallowtime'] = "Yorumu düzenlemeye izin verilen süre doldu";
+$L['com_commentdeleteallowtime'] = "Yorumu silmek için izin verilen süre doldu";
 
 /* ====== Forums ======= */
 
-$L['for_newtopic'] = "New topic";
-$L['for_markallasread'] = "Mark all posts as read";
-$L['for_titletooshort'] = "The title is too short or missing"; // New in v171
-$L['for_msgtooshort'] = "Text of the topic is too short or missing"; // New in v171
-$L['for_updatedby'] = "<br /><em>This post was edited by %1\$s (%2\$s, %3\$s ago)</em>";
-$L['for_antibump'] = "The anti-bump protection is up, you cannot post twice in a row.";
-$L['for_mod_clear'] = "Clear the ratings";    // New in v160
-$L['for_mod_force'] = "Force the rating to ";    // New in v160
+$L['for_newtopic'] = "Yeni Konu";
+$L['for_markallasread'] = "Tüm gönderileri okundu olarak işaretle";
+$L['for_titletooshort'] = "Başlık çok kısa veya eksik"; // New in v171
+$L['for_msgtooshort'] = "Konunun metni çok kısa veya eksik"; // New in v171
+$L['for_updatedby'] = "<br /><em>Bu gönderi tarafından düzenlendi %1\$s (%2\$s, %3\$s önce)</em>";
+$L['for_antibump'] = "Spam koruma devrede, arka arkaya iki kez gönderi paylaşamazsınız.";
+$L['for_mod_clear'] = "Derecelendirmeleri temizle";    // New in v160
+$L['for_mod_force'] = "Derecelendirmeyi zorla ";    // New in v160
 
-$L['for_quickpost'] = "Quick response"; // New in v178
-$L['for_post_text'] = "Текст поста"; // New in v178
+$L['for_quickpost'] = "Hızlı cevap"; // New in v178
+$L['for_post_text'] = "Yazının metni"; // New in v178
 
 /* ====== List ====== */
 
-$L['lis_submitnew'] = "Submit a new entry";
+$L['lis_submitnew'] = "Yeni bir giriş gönder";
 
 /* ====== Messages ====== */
 
@@ -579,39 +574,39 @@ $L['lis_submitnew'] = "Submit a new entry";
 
 /* ====== Pages ====== */
 
-$L['pag_catmissing'] = "The category code is missing";
-$L['pag_titletooshort'] = "The title is too short or missing";
-$L['pag_desctooshort'] = "The description is too short or missing";
-$L['pag_authortooshort'] = "The author name is too short or missing";
-$L['pagadd_title'] = "New page submission form";
-$L['pagadd_subtitle'] = "Submit a new page";
-$L['paged_title'] = "Page properties";
-$L['paged_subtitle'] = "Update values for this page";
+$L['pag_catmissing'] = "Kategori kodu eksik";
+$L['pag_titletooshort'] = "Başlık çok kısa veya eksik";
+$L['pag_desctooshort'] = "Açıklama çok kısa veya eksik";
+$L['pag_authortooshort'] = "Yazar adı çok kısa veya eksik";
+$L['pagadd_title'] = "Yeni sayfa gönderim formu";
+$L['pagadd_subtitle'] = "Yeni bir sayfa gönder";
+$L['paged_title'] = "Sayfa özellikleri";
+$L['paged_subtitle'] = "Bu sayfa için değerleri güncelle";
 
 /* ====== Personal file space ====== */
 
-$L['pfs_title'] = "My Personal File Space";
-$L['pfs_filetoobigorext'] = "The upload failed, this file is too big maybe, or the extension is not allowed ?";
-$L['pfs_fileexists'] = "The upload failed, there's already a file with this name ?";
-$L['pfs_filelistempty'] = "List is empty.";
-$L['pfs_folderistempty'] = "This folder is empty.";
-$L['pfs_totalsize'] = "Total size";
-$L['pfs_maxspace'] = "Maximum space allowed";
-$L['pfs_maxsize'] = "Maximum size for a file";
-$L['pfs_filesintheroot'] = "File(s) in the root";
-$L['pfs_filesinthisfolder'] = "File(s) in this folder";
-$L['pfs_newfile'] = "Upload a file :";
-$L['pfs_newfolder'] = "Create a new folder :";
-$L['pfs_extallowed'] = "Extensions allowed";
+$L['pfs_title'] = "Kişisel Dosya Alanım";
+$L['pfs_filetoobigorext'] = "Yükleme başarısız oldu, bu dosya çok büyük olabilir veya uzantıya izin verilmiyor ?";
+$L['pfs_fileexists'] = "Yükleme başarısız oldu, bu ada sahip bir dosya zaten var ?";
+$L['pfs_filelistempty'] = "Liste boş.";
+$L['pfs_folderistempty'] = "Bu klasör boş.";
+$L['pfs_totalsize'] = "Toplam boyut";
+$L['pfs_maxspace'] = "İzin verilen maksimum alan";
+$L['pfs_maxsize'] = "Bir dosya için maksimum boyut";
+$L['pfs_filesintheroot'] = "Ana dizin dosya(lar)";
+$L['pfs_filesinthisfolder'] = "Bu klasördeki dosya(lar)";
+$L['pfs_newfile'] = "Bir dosya yükle :";
+$L['pfs_newfolder'] = "Yeni bir klasör oluştur :";
+$L['pfs_extallowed'] = "İzin verilen uzantılar";
 
-$L['pfs_insertasthumbnail'] = "Insert as thumbnail"; // New in v175
-$L['pfs_insertasimage'] = "Insert as full size image"; // New in v175
-$L['pfs_insertaslink'] = "Insert as a link to the file"; // New in v175
-$L['pfs_multiuploading'] = "Multiple File Upload"; // New in v175
+$L['pfs_insertasthumbnail'] = "Küçük resim olarak ekle"; // New in v175
+$L['pfs_insertasimage'] = "Tam boyutlu resim olarak ekle"; // New in v175
+$L['pfs_insertaslink'] = "Dosyaya bağlantı olarak ekle"; // New in v175
+$L['pfs_multiuploading'] = "Çoklu Dosya Yükleme"; // New in v175
 
-$L['pfs_setassample'] = "Set as sample";  // New in v150
-$L['pfs_addlogo'] = "Add the logo";  // New in v150
-$L['pfs_resize'] = "Resize if larger than %1\$s pixels";  // New in v150
+$L['pfs_setassample'] = "Örnek olarak ayarla";  // New in v150
+$L['pfs_addlogo'] = "Logo ekle";  // New in v150
+$L['pfs_resize'] = "Şundan büyükse yeniden boyutlandır %1\$s piksel";  // New in v150
 
 /* ====== Plug ====== */
 
@@ -635,9 +630,9 @@ $L['pm_archives'] = "Arşivler";
 $L['pm_arcsubtitle'] = "Eski mesajlar, en yenisi en üstte";
 $L['pm_replyto'] = "Bu kullanıcıyı yanıtla";
 $L['pm_putinarchives'] = "Arşivlere gönder";
-$L['pm_notifytitle'] = "New private message";
-$L['pm_notify'] = "Hi %1\$s,\n\nYou are receiving this email because there is a new private message in your inbox.\nThe sender is : %2\$s\nClick this link to read it : %3\$s";
-$L['pm_multiplerecipients'] = "This private messages was also sent to %1\$s other recipient(s).";
+$L['pm_notifytitle'] = "Yeni özel mesaj";
+$L['pm_notify'] = "Merhaba %1\$s,\n\nBu e-postayı, gelen kutunuzda yeni bir özel mesaj olduğu için alıyorsunuz..\nGönderen : %2\$s\nOkumak için bu bağlantıya tıklayın : %3\$s";
+$L['pm_multiplerecipients'] = "Bu özel mesaj şu adrese de gönderildi: %1\$s diğer alıcı(lar).";
 
 /* ====== Polls ====== */
 
