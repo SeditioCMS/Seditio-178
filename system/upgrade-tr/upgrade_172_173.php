@@ -19,84 +19,84 @@ if ( !defined('SED_CODE') || !defined('SED_ADMIN') ) { die('Wrong URL.'); }
 
 // ========================================
 
-$adminmain .= "Clearing the internal SQL cache...<br />";
+$adminmain .= "Dahili SQL önbelleğini temizleme...<br />";
 $sql = sed_sql_query("TRUNCATE TABLE ".$cfg['sqldbprefix']."cache");
 
-$adminmain .= "Updating parser table<br />";
+$adminmain .= "Ayrıştırıcı tablosu güncelleniyor<br />";
 $sqlqr = "UPDATE ".$cfg['sqldbprefix']."parser SET parser_code1 = '<!--readmore-->' WHERE parser_bb1 = '[more]'";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
 if ($cfg['textmode'] == "html")
     {
-      //Reinstall plugin Jevix, Ckeditor && Removing plugin MarkHTML
+      //Eklentiyi yeniden yükle Jevix, Ckeditor && Eklenti MarkHTML kaldırılıyor
       
-      $adminmain .= "Removing the plugin Jevix<br />";
+      $adminmain .= "Jevix eklentisini kaldırma<br />";
       $adminmain .= sed_plugin_uninstall('jevix');
-      $adminmain .= "Removing the plugin Ckeditor<br />";
+      $adminmain .= "Eklenti Ckeditor'u kaldırma<br />";
       $adminmain .= sed_plugin_uninstall('ckeditor');
-      $adminmain .= "Removing the plugin MarkHTML<br />";
+      $adminmain .= "MarkHTML eklentisini kaldırma<br />";
       $adminmain .= sed_plugin_uninstall('markhtml');      
-      $adminmain .= "Install the plugin Jevix<br />";
+      $adminmain .= "Jevix eklentisini yükleniyor<br />";
       $adminmain .= sed_plugin_install('jevix');      
-      $adminmain .= "Install the plugin Ckeditor<br />";
+      $adminmain .= "Ckeditor eklentisini yükleniyor<br />";
       $adminmain .= sed_plugin_install('ckeditor');
     }
 else 
     {
-      //Reinstall plugin Textboxer2
+      //Textboxer2 eklentisini yeniden yükleyin
       
-      $adminmain .= "Removing the plugin Textboxer2<br />";
+      $adminmain .= "Textboxer2 eklentisini kaldırma<br />";
       $adminmain .= sed_plugin_uninstall('textboxer2'); 
-      $adminmain .= "Install the plugin Textboxer2<br />";
+      $adminmain .= "Textboxer2 eklentisi kuruLUYOR<br />";
       $adminmain .= sed_plugin_install('textboxer2');        
     }
     
-$adminmain .= "Adding the 'structure_allowcomments' column to structure...<br />";
+$adminmain .= "'struct_allowcomments' sütununu yapıya ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."structure ADD structure_allowcomments tinyint(1) NOT NULL DEFAULT '1' AFTER structure_order";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'structure_allowratings' column to structure...<br />";
+$adminmain .= "'struct_allowratings' sütununu yapıya ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."structure ADD structure_allowratings tinyint(1) NOT NULL DEFAULT '1' AFTER structure_allowcomments";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'page_allowcomments' column to pages...<br />";
+$adminmain .= "Sayfalara 'page_allowcomments' sütununu ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."pages ADD page_allowcomments tinyint(1) NOT NULL DEFAULT '1' AFTER page_count";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'page_allowratings' column to pages...<br />";
+$adminmain .= "Sayfalara 'page_allowratings' sütununu ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."pages ADD page_allowratings tinyint(1) NOT NULL DEFAULT '1' AFTER page_allowcomments";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'maxcommentsperpage' new config into the core<br />";
+$adminmain .= "Çekirdeğe 'maxcommentsperpage' yeni yapılandırmasını ekleme<br />";
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."config (config_owner, config_cat, config_order, config_name, config_type, config_value, config_default)
 VALUES ('core', 'comments', '05', 'maxcommentsperpage', 2, '30', '')";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'maxtimeallowcomedit' new config into the core<br />";
+$adminmain .= "Çekirdeğe 'maxtimeallowcomedit' yeni yapılandırmasını ekleme<br />";
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."config (config_owner, config_cat, config_order, config_name, config_type, config_value, config_default)
 VALUES ('core', 'comments', '06', 'maxtimeallowcomedit', 2, '15', '')";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'commentsorder' new config into the core<br />";
+$adminmain .= "Çekirdeğe 'yorum sırası' yeni yapılandırmasını ekleme<br />";
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."config (config_owner, config_cat, config_order, config_name, config_type, config_value, config_default)
 VALUES ('core', 'comments', '11', 'commentsorder', 2, 'ASC', '')";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'defskin' new hidden config into the core<br />";
+$adminmain .= "Çekirdeğe 'defskin' yeni gizli yapılandırmasını ekleme<br />";
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."config (config_owner, config_cat, config_order, config_name, config_type, config_value, config_default)
 VALUES ('core', 'skin', '16', 'defskin', 7, '', '')";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the RSS new configs into the core<br />";
+$adminmain .= "Çekirdeğe RSS yeni yapılandırmaları ekleme<br />";
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."config (config_owner, config_cat, config_order, config_name, config_type, config_value, config_default)
 VALUES ('core', 'rss', '01', 'disable_rss', 3, '0', '')";
 $adminmain .= sed_cc($sqlqr)."<br />";
@@ -132,7 +132,7 @@ VALUES ('core', 'rss', '07', 'rss_defaultcode', 2, 'news', '')";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Changing the SQL version number to 173...<br />";
+$adminmain .= "SQL sürüm numarasını değiştirme 173...<br />";
 $sql = sed_sql_query("UPDATE ".$cfg['sqldbprefix']."stats SET stat_value=173 WHERE stat_name='version'");
 
 $upg_status = TRUE;

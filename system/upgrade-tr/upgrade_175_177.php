@@ -16,10 +16,10 @@ Description=Database upgrade
 
 if ( !defined('SED_CODE') || !defined('SED_ADMIN') ) { die('Wrong URL.'); }
 
-$adminmain .= "Clearing the internal SQL cache...<br />";
+$adminmain .= "Dahili SQL önbelleğini temizleme...<br />";
 $sql = sed_sql_query("TRUNCATE TABLE ".$cfg['sqldbprefix']."cache");
 
-$adminmain .= "Changing the SQL version number to 177...<br />";
+$adminmain .= "SQL sürüm numarasını değiştirme 177...<br />";
 
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."core VALUES ('', 'dic', 'Directories', '150', 1, 0);";
 $adminmain .= sed_cc($sqlqr)."<br />";
@@ -88,22 +88,22 @@ $sqlqr = "CREATE TABLE ".$cfg['sqldbprefix']."dic_items (
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr); 
 
-$adminmain .= "Adding the 'page_price' column to table pages...<br />";
+$adminmain .= "Tablo sayfalarına 'page_price' sütununu ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."pages ADD page_price varchar(11) NOT NULL DEFAULT '0' AFTER page_seo_keywords";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'page_thumb' column to table pages...<br />";
+$adminmain .= "Tablo sayfalarına 'page_thumb' sütununu ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."pages ADD page_thumb varchar(255) NOT NULL DEFAULT '' AFTER page_price";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'user_firstname' column to table users...<br />";
+$adminmain .= "Tablo kullanıcılarına 'user_firstname' sütununu ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."users ADD user_firstname varchar(100) NOT NULL DEFAULT '' AFTER user_name";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 
-$adminmain .= "Adding the 'user_lastname' column to table users...<br />";
+$adminmain .= "Tablo kullanıcılarına 'user_lastname' sütununu ekleme...<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."users ADD user_lastname varchar(100) NOT NULL DEFAULT '' AFTER user_firstname";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);           
