@@ -619,102 +619,102 @@ $L['pfs_resize'] = "Resize if larger than %1\$s pixels";  // New in v150
 
 /* ====== Pm ====== */
 
-$L['pm_titletooshort'] = "The title is too short or missing";
-$L['pm_bodytooshort'] = "The body of the private message is too short or missing";
-$L['pm_bodytoolong'] = "The body of the private message is too long, ".$cfg['pm_maxsize']." chars maximum";
-$L['pm_wrongname'] = "At least one recipient was wrong, and so removed from the list";
-$L['pm_toomanyrecipients'] = "%1\$s recipients maximum please";
-$L['pmsend_title'] = "Send a new private message";
+$L['pm_titletooshort'] = "Başlık çok kısa veya eksik";
+$L['pm_bodytooshort'] = "Özel mesajın gövdesi çok kısa veya eksik";
+$L['pm_bodytoolong'] = "Özel mesajın gövdesi çok uzun, ".$cfg['pm_maxsize']." maksimum karakter";
+$L['pm_wrongname'] = "En az bir alıcı hatalı olduğu için listeden kaldırıldı";
+$L['pm_toomanyrecipients'] = "%1\$s maksimum alıcı lütfen";
+$L['pmsend_title'] = "Yeni özel mesaj gönder";
 $L['pmsend_subtitle'] = "";
-$L['pm_sendnew'] = "Send a new private message";
-$L['pm_inbox'] = "In-box";
-$L['pm_inboxsubtitle'] = "Private messages, newest is at top";
-$L['pm_sentbox'] = "Sent-box";
-$L['pm_sentboxsubtitle'] = "Messages sent and not yet displayed by the recipient";
-$L['pm_archives'] = "Archives";
-$L['pm_arcsubtitle'] = "Old messages, newest is at top";
-$L['pm_replyto'] = "Reply to this user";
-$L['pm_putinarchives'] = "Put in archives";
+$L['pm_sendnew'] = "Yeni özel mesaj gönder";
+$L['pm_inbox'] = "Gelen kutusu";
+$L['pm_inboxsubtitle'] = "Özel mesajlar, en yenisi en üstte";
+$L['pm_sentbox'] = "Gönderilen kutu";
+$L['pm_sentboxsubtitle'] = "Gönderilen ve alıcı tarafından henüz görüntülenmeyen mesajlar";
+$L['pm_archives'] = "Arşivler";
+$L['pm_arcsubtitle'] = "Eski mesajlar, en yenisi en üstte";
+$L['pm_replyto'] = "Bu kullanıcıyı yanıtla";
+$L['pm_putinarchives'] = "Arşivlere gönder";
 $L['pm_notifytitle'] = "New private message";
 $L['pm_notify'] = "Hi %1\$s,\n\nYou are receiving this email because there is a new private message in your inbox.\nThe sender is : %2\$s\nClick this link to read it : %3\$s";
 $L['pm_multiplerecipients'] = "This private messages was also sent to %1\$s other recipient(s).";
 
 /* ====== Polls ====== */
 
-$L['polls_viewresults'] = "View results";
-$L['polls_viewarchives'] = "View all polls";
-$L['polls_Vote'] = "Vote";
-$L['polls_votes'] = "votes";
+$L['polls_viewresults'] = "Sonuçları Görüntüle";
+$L['polls_viewarchives'] = "Tüm anketleri görüntüle";
+$L['polls_Vote'] = "Oy";
+$L['polls_votes'] = "oylar";
 $L['polls_since'] = "since";
-$L['polls_alreadyvoted'] = "You've already voted for this poll.";
-$L['polls_notyetvoted'] = "You can vote by clicking a line above.";
-$L['polls_votecasted'] = "Done, vote succesfully recorded";
+$L['polls_alreadyvoted'] = "Bu ankete zaten oy verdiniz.";
+$L['polls_notyetvoted'] = "Yukarıdaki bir satıra tıklayarak oy verebilirsiniz.";
+$L['polls_votecasted'] = "Tamamlandı, oy başarıyla kaydedildi";
 
 /* ====== Ratings ====== */
 
-$L['rat_choice1'] = "Very poor";
-$L['rat_choice2'] = "Poor";
-$L['rat_choice3'] = "Not that bad";
-$L['rat_choice4'] = "Fair";
-$L['rat_choice5'] = "Average";
-$L['rat_choice6'] = "Almost good";
-$L['rat_choice7'] = "Good";
-$L['rat_choice8'] = "Very good";
-$L['rat_choice9'] = "Excellent";
-$L['rat_choice10'] = "Perfect";
-$L['rat_votecasted'] = "Done, vote successfully recorded";
+$L['rat_choice1'] = "Çok kötü";
+$L['rat_choice2'] = "Kötü";
+$L['rat_choice3'] = "Kötü değil";
+$L['rat_choice4'] = "Adil";
+$L['rat_choice5'] = "Ortalama";
+$L['rat_choice6'] = "İyi sayılır";
+$L['rat_choice7'] = "İyi";
+$L['rat_choice8'] = "Çok iyi";
+$L['rat_choice9'] = "Harika";
+$L['rat_choice10'] = "Mükemmel";
+$L['rat_votecasted'] = "Tamamlandı, oy başarıyla kaydedildi";
 $L['rat_since'] = "since";
-$L['rat_notyetrated'] = "Not yet rated";
-$L['rat_alreadyvoted'] = "You've already voted for this item.";
-$L['rat_registeredonly'] = "Only registered users can rate items.";
+$L['rat_notyetrated'] = "Henüz derecelendirilmedi";
+$L['rat_alreadyvoted'] = "Bu öğe için zaten oy verdiniz.";
+$L['rat_registeredonly'] = "Öğeleri yalnızca kayıtlı kullanıcılar derecelendirebilir.";
 
-$L['rat_disable'] = "Rating change is disabled!"; // New in v173
+$L['rat_disable'] = "Derecelendirme değişikliği devre dışı bırakıldı!"; // New in v173
 
 /* ====== Users ====== */
 
-$L['use_title'] = "Users";
-$L['use_subtitle'] = "Registered members";
-$L['useed_accountactivated'] = "Account activated";
-$L['useed_email'] = "You are receiving this email because an administrator activated your account.\nYou may now login using the username and password you received in a previous email.\n\n";
-$L['useed_title'] = "Edit";
+$L['use_title'] = "Kullanıcılar";
+$L['use_subtitle'] = "Kayıtlı üyeler";
+$L['useed_accountactivated'] = "Hesap etkinleştirildi";
+$L['useed_email'] = "Bu e-postayı, bir yönetici hesabınızı etkinleştirdiği için alıyorsunuz.\nArtık bir önceki e-postada aldığınız kullanıcı adı ve şifreyi kullanarak giriş yapabilirsiniz..\n\n";
+$L['useed_title'] = "Düzenle";
 $L['useed_subtitle'] = "&nbsp;";
-$L['use_byfirstletter'] = "Name starting by";
-$L['use_allusers'] = "All users";
-$L['use_allbannedusers'] = "Users banned";
-$L['use_allinactiveusers'] = "Users inactive";
+$L['use_byfirstletter'] = "Ad ile başlayan";
+$L['use_allusers'] = "Tüm kullanıcılar";
+$L['use_allbannedusers'] = "Yasaklı üyeler";
+$L['use_allinactiveusers'] = "Pasif üyeler";
 
-$L['pro_title'] = "Profile";
-$L['pro_subtitle'] = "Your personal account";
-$L['pro_passtoshort'] = "The password must be at least 4 chars long and must consist of alphanumerical characters and underscore only.";
-$L['pro_passdiffer'] = "The 2 password fields do not match";
-$L['pro_wrongpass'] = "You didn't enter your present password, or it's wrong";
-$L['pro_avatarsupload'] = "Upload an avatar";
-$L['pro_sigupload'] = "Upload a signature";
-$L['pro_photoupload'] = "Upload a photography";
-$L['pro_avatarspreset'] = "...or click here to display a gallery of pre-loaded avatars";
-$L['pro_avatarschoose'] = "Click an image below to set it as your own avatar";
-$L['pro_avataruploadfailed'] = "The upload failed, delete the old avatar before to free the slot !";
+$L['pro_title'] = "Profil";
+$L['pro_subtitle'] = "Kişisel hesabınız";
+$L['pro_passtoshort'] = "Şifre en az 4 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterlerden ve alt çizgiden oluşmalıdır.";
+$L['pro_passdiffer'] = "2 şifre alanı eşleşmiyor";
+$L['pro_wrongpass'] = "Mevcut şifrenizi girmediniz veya yanlış";
+$L['pro_avatarsupload'] = "Avatar yükleyin";
+$L['pro_sigupload'] = "İmza yükle";
+$L['pro_photoupload'] = "Fotoğraf yükleyin";
+$L['pro_avatarspreset'] = "...veya önceden yüklenmiş avatar galerisini görüntülemek için buraya tıklayın";
+$L['pro_avatarschoose'] = "Kendi avatarınız olarak ayarlamak için aşağıdaki resme tıklayın";
+$L['pro_avataruploadfailed'] = "Yükleme başarısız oldu, yuvayı boşaltmak için önce eski avatarı silin !";
 
 /* ====== Rss ====== */
 
-$L['rss_lastforums'] = "Latest on forums"; // New in v173
-$L['rss_lastsections'] = "Latest posts in the forum: "; // New in v173
-$L['rss_lasttopics'] = "Last post in the topic: "; // New in v173
-$L['rss_commentauthor'] = "User Comments"; // New in v173
-$L['rss_lastcomments'] = "Recent Comments"; // New in v173
+$L['rss_lastforums'] = "Forumlarda son durum"; // New in v173
+$L['rss_lastsections'] = "Forumdaki son gönderiler: "; // New in v173
+$L['rss_lasttopics'] = "Konudaki son mesaj: "; // New in v173
+$L['rss_commentauthor'] = "Kullanıcı Yorumları"; // New in v173
+$L['rss_lastcomments'] = "Son Yorumlar"; // New in v173
 
 /* ====== Metadata information ====== */
 
-$L['mt_title'] = "Title"; // New in v175
-$L['mt_description'] = "Meta description"; // New in v175
-$L['mt_keywords'] = "Meta keywords"; // New in v175
+$L['mt_title'] = "Başlık"; // New in v175
+$L['mt_description'] = "Meta Açıklaması"; // New in v175
+$L['mt_keywords'] = "Anahtar Kelimeler"; // New in v175
 
 /* ====== Captcha Errors ====== */
-$L['captcha_error_many_incorrect'] = "You have entered too many incorrect captchas! Contact your administrator for help!";
-$L['captcha_error_you_robot_or_too_fast'] = "You or a robot or are entering captcha too fast!";
-$L['captcha_error_go_bad_robot'] = "Robot, go away!";
-$L['captcha_error_incorrect'] = "Incorrect captcha!";
-$L['captcha_error_hacker_go_home'] = "Hacker, go away!";
+$L['captcha_error_many_incorrect'] = "Çok fazla yanlış captcha girdiniz! Yardım için yöneticinize başvurun!";
+$L['captcha_error_you_robot_or_too_fast'] = "Siz veya bir robot captcha'ya çok hızlı giriyorsunuz!";
+$L['captcha_error_go_bad_robot'] = "Robot, git buradan!";
+$L['captcha_error_incorrect'] = "Yanlış Captcha!";
+$L['captcha_error_hacker_go_home'] = "Hacker, defol git!";
 
 $sed_translit = array(
 	//cyr
@@ -739,18 +739,18 @@ $sed_translit = array(
 	//turk
 	'Ç' => 'c', 'Ş' => 's', 'Ğ' => 'g', 'Ü' => 'u', 'İ' => 'i', 
 	'Ö' => 'o', 'ç' => 'c', 'ş' => 's', 'ğ' => 'g', 'ü' => 'u', 
-	'ö' => 'o', 'ı' => 'i', '+' => 'plus', '#' => 'sharp'
+	'ö' => 'o', 'ı' => 'i', '+' => '-', '#' => '-'
 );
 
 $sed_months_list = array(
-	1 => 'january', 2 => 'february', 3 => 'march', 4 => 'april',
-	5 => 'may', 6 => 'june', 7 => 'july', 8 => 'august',
-	9 => 'september', 10 => 'october', 11 => 'november', 12 => 'december'
+	1 => 'ocak', 2 => 'şubat', 3 => 'mart', 4 => 'nisan',
+	5 => 'mayıs', 6 => 'haziran', 7 => 'temmuz', 8 => 'ağustos',
+	9 => 'eylül', 10 => 'ekim', 11 => 'kasım', 12 => 'aralık'
 );
 
 $sed_daysweek_list = array(
-   'sunday', 'monday', 'tuesday', 'wednesday',
-   'thursday', 'friday', 'saturday'
+   'pazar', 'pazartesi', 'salı', 'çarşamba',
+   'perşembe', 'cuma', 'cumartesi'
 );
 
 ?>
