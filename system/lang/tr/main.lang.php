@@ -479,30 +479,30 @@ $L['bbcodes_rutube'] = "RuTube"; // New in v175
 
 /* ====== Common ====== */
 
-$L['com_skinfail'] = "Warning, failed to load your prefered skin, check your profile.";
+$L['com_skinfail'] = "Uyarı, tercih ettiğiniz tema yüklenemedi, profilinizi kontrol edin.";
 $L['com_members'] = "member(s)";
 $L['com_guests'] = "guest(s)";
 
 /* ====== Gallery ====== */
 
-$L['gallery_home_title'] = "Galleries";         // New in v150
-$L['gallery_browse_title'] = "Gallery";         // New in v150
-$L['gallery_details_title'] = "Picture";         // New in v150
+$L['gallery_home_title'] = "Galeriler";         // New in v150
+$L['gallery_browse_title'] = "Galeri";         // New in v150
+$L['gallery_details_title'] = "Resim";         // New in v150
 
 /* ====== Header ====== */
 
-$L['hea_privatemessages'] = "new private message(s)";
-$L['hea_noprivatemessages'] = "No private messages";
-$L['hea_youareloggedas'] = "Logged in as";
-$L['hea_youarenotlogged'] = "You're not logged in.";
-$L['hea_valqueues'] = "In validation queues : ";
+$L['hea_privatemessages'] = "yeni özel mesaj(lar)";
+$L['hea_noprivatemessages'] = "özel mesaj yok";
+$L['hea_youareloggedas'] = "olarak giriş yaptı";
+$L['hea_youarenotlogged'] = "Giriş yapmadınız.";
+$L['hea_valqueues'] = "Doğrulama sırasında : ";
 
-$L['hea_logout'] = "Logout";  // New in v175
-$L['hea_profile'] = "Profile"; // New in v175
-$L['hea_private_messages'] = "Private messages";  // New in v175
-$L['hea_mypfs'] = "My files"; // New in v175
-$L['hea_users'] = "Users"; // New in v175
-$L['hea_administration'] = "Administration";  // New in v175
+$L['hea_logout'] = "Çıkış";  // New in v175
+$L['hea_profile'] = "Profil"; // New in v175
+$L['hea_private_messages'] = "Özel mesajlar";  // New in v175
+$L['hea_mypfs'] = "PFS"; // New in v175
+$L['hea_users'] = "Üyeler"; // New in v175
+$L['hea_administration'] = "Yönetim";  // New in v175
 
 $L['hea_pageadd'] = "Yeni sayfa ekle"; // New in v178
 
