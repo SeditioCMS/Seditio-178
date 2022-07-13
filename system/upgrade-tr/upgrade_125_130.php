@@ -3,9 +3,9 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditiocms.com
 [BEGIN_SED]
-File=upgrade_126_130.php
+File=upgrade_125_130.php
 Version=178
 Updated=2022-jun-12
 Type=Core.upgrade
@@ -43,5 +43,6 @@ $sql = sed_sql_query("UPDATE ".$cfg['sqldbprefix']."stats SET stat_value=130 WHE
 $adminmain .= "-----------------------<br />";
 
 $upg_status = TRUE;
+
 
 ?>
