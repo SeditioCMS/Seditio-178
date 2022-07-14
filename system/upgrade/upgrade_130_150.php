@@ -20,13 +20,14 @@ if ( !defined('SED_CODE') || !defined('SED_ADMIN') ) { die('Wrong URL.'); }
 
 $adminmain .= "-----------------------<br />";
 
-$adminmain .= "Galeride 'görüntülenen' küçük resmi saklamak için sütun ekleme<br />";
+
+$adminmain .= "Adding the column to store the 'displayed' thumbnail in the gallery<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."pfs_folders ADD pff_sample INT(11) NOT NULL DEFAULT '0' AFTER pff_isgallery";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 $adminmain .= "-----------------------<br />";
 
-$adminmain .= "Galeriyi çekirdeğe ekleme<br />";
+$adminmain .= "Adding the Gallery into the core<br />";
 $sqlqr = "INSERT INTO ".$cfg['sqldbprefix']."core (ct_code, ct_title, ct_version, ct_state, ct_lock) VALUES ('gallery', 'Gallery', '150', '1', '0')";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
@@ -72,7 +73,7 @@ $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 $adminmain .= "-----------------------<br />";
 
-$adminmain .= "Galeri için haklar ekleme";
+$adminmain .= "Adding the rights for the gallery";
 $sqlqr = "SELECT grp_id FROM ".$cfg['sqldbprefix']."groups WHERE 1 order by grp_id ASC";
 $sql = sed_sql_query($sqlqr);
 
@@ -112,13 +113,13 @@ sed_auth_reorder();
 sed_auth_clear('all');
 $adminmain .= "-----------------------<br />";
 
-$adminmain .= "PFS açıklamasını METİN türü olarak değiştirme<br />";
+$adminmain .= "Changing the PFS description to TEXT type<br />";
 $sqlqr = "ALTER TABLE ".$cfg['sqldbprefix']."pfs CHANGE pfs_desc pfs_desc TEXT NOT NULL";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
 $adminmain .= "-----------------------<br />";
 
-$adminmain .= "PFS klasörlerini güncelleme<br />";
+$adminmain .= "Updating the PFS folders<br />";
 $sqlqr = "UPDATE ".$cfg['sqldbprefix']."pfs_folders SET pff_isgallery=pff_isgallery+pff_ispublic WHERE 1";
 $adminmain .= sed_cc($sqlqr)."<br />";
 $sql = sed_sql_query($sqlqr);
@@ -136,7 +137,7 @@ $adminmain .= "-----------------------<br />";
 // $sql = sed_sql_query($sqlqr);
 // $adminmain .= "-----------------------<br />";
 
-$adminmain .= "SQL sürüm numarasını değiştirme 150...<br />";
+$adminmain .= "Changing the SQL version number to 150...<br />";
 $sql = sed_sql_query("UPDATE ".$cfg['sqldbprefix']."stats SET stat_value=150 WHERE stat_name='version'");
 $adminmain .= "-----------------------<br />";
 
