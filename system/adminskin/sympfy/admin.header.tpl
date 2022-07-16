@@ -133,7 +133,7 @@
 				</div>
 				
 				<div class="topbar-menu-left">
-					<a href="/" title="{PHP.L.Gotosite}"><i class="ic-external-link"></i> {PHP.L.Gotosite}</a>
+			<a href="" title="{PHP.L.Gotosite}" target="_blank"><i class="ic-external-link"></i> {PHP.L.Gotosite}</a>
 				</div>
 				
 				<div class="topbar-menu-right">
