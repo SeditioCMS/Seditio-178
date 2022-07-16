@@ -316,7 +316,7 @@ $skinlang['usersprofile']['Newpasswordhint'] = "(Geçerli parolayı<br />saklama
 $skinlang['usersprofile']['Update'] = "Güncelle";
 
 //users.register.tpl
-$skinlang['usersregister']['Username'] = "Giriş:";
+$skinlang['usersregister']['Username'] = "Kullanıcı adı:";
 $skinlang['usersregister']['Userfirstname'] = "İsim:";
 $skinlang['usersregister']['Userlastname'] = "Soyisim:";
 $skinlang['usersregister']['Validemail'] = "Geçerli e-posta:";
