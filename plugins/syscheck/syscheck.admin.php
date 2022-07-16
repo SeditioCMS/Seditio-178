@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=plugins/syscheck/syscheck.php
-Version=178
-Updated=2022-jun-12
+Version=179
+Updated=2022-jul-15
 Type=Plugin
 Author=Seditio Team
 Description=
@@ -211,6 +211,7 @@ $skinfiles[] = 'pfs.tpl';
 $skinfiles[] = 'plugin.tpl';
 $skinfiles[] = 'pm.send.tpl';
 $skinfiles[] = 'pm.tpl';
+$skinfiles[] = 'poll.tpl';
 $skinfiles[] = 'polls.tpl';
 $skinfiles[] = 'polls.standalone.tpl';
 $skinfiles[] = 'popup.tpl';

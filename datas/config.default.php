@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=datas/config.php
-Version=178
-Updated=2022-jun-12
+Version=179
+Updated=2022-jul-15
 Type=Config
 Author=Seditio Team
 Description=Configuration
@@ -27,8 +27,9 @@ $cfg['mysqldb'] = 'seditio';		// Database name
 // Default skin and default language
 // ========================
 
-$cfg['defaultskin'] = 'simple';	// Default skin code. Be SURE it's pointing to a valid folder in /skins/... !!
+$cfg['defaultskin'] = 'sympfy';		// Default skin code. Be SURE it's pointing to a valid folder in /skins/... !!
 $cfg['defaultlang'] = 'en';			// Default language code
+$cfg['adminskin'] = 'sympfy';		// Default admin skin
 
 // ========================
 // More settings

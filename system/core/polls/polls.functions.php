@@ -7,7 +7,7 @@ https://seditio.org
 
 [BEGIN_SED]
 File=polls.php
-Version=178
+Version=179
 Updated=2022-jul-14
 Type=Core
 Author=Seditio Team
@@ -249,7 +249,22 @@ function sed_poll_vote($id, $vote)
 	return(array($alreadyvoted, $votecasted));	
 }
 
+function sed_poll_reset($id)
+{
+    global $db_polls_options, $db_polls_voters;
+    $id = (int) $id;	
+	$sql = sed_sql_query("DELETE FROM $db_polls_voters WHERE pv_pollid='$id'");
+	$num = sed_sql_affectedrows();
+	$sql = sed_sql_query("UPDATE $db_polls_options SET po_count=0 WHERE po_pollid='$id'");
+	$num = $num + sed_sql_affectedrows();	
+	return $num;
+}
 
-
+function sed_poll_bump($id)
+{
+    global $db_polls, $sys;
+    $id = (int) $id;	
+	$sql = sed_sql_query("UPDATE $db_polls SET poll_creationdate='".$sys['now_offset']."' WHERE poll_id='$id'");
+}
 
 ?>

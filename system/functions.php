@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=system/functions.php
-Version=178
-Updated=2022-jun-12
+Version=179
+Updated=2022-jul-15
 Type=Core
 Author=Seditio Team
 Description=Functions
@@ -63,14 +63,14 @@ $cfg['textarea_default_width'] = 75;
 $cfg['textarea_default_height'] = 16;
 $cfg['sqldb'] = 'mysql';
 $cfg['sqldbprefix'] = 'sed_';
-$cfg['version'] = '178';
+$cfg['version'] = '179';
 $cfg['versions_list'] = array (120, 121, 125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178, 179);
 $cfg['group_colors'] = array ('red', 'yellow', 'black', 'blue', 'white', 'green', 'gray', 'navy', 'darkmagenta', 'pink', 'cadetblue', 'linen', 'deepskyblue', 'inherit');
 $cfg['separator_symbol'] = "&raquo;";
 
 $cfg['available_image_sizes'] = array(); // array("800x600", "400x300");
 
-$cfg['adminskin'] = "simple";
+$cfg['adminskin'] = "sympfy";
 
 /* Message type:  attention => a, error => e, success => s, information => i */
 $cfg['msgtype'] = array('100' => 'e', '101' => 'e', '102' => 'i', '104' => 'i', '105' => 's', '106' => 's', '109' => 's', '113' => 's', '117' => 'i', '118' => 's', '151' => 'e', 
@@ -149,19 +149,21 @@ function sed_alphaonly($text)
 /** 
  * Displays results AJAX request 
  * 
- * Clearing the output buffer and sending a new content generated as a result of the AJAX call.
+ * Clearing the output buffer and sending a new content generated as a result of the AJAX call. 
  * 
  * @param string $res Result of the AJAX call
+ * @param string $ajax Ajax content flag
+ * @param string $content_type Content type
  */	
-function sed_ajax_flush($res, $ajax)
+function sed_ajax_flush($res, $ajax, $content_type = 'text/html')
 	{	
 	if ($ajax)
 		{
 		ob_clean();
-		sed_sendheaders();		
-	  echo $res; 
-	  ob_flush(); 
-	  exit; 		
+		sed_sendheaders($content_type);		
+		echo $res; 
+		ob_flush(); 
+		exit; 		
 		}
 	}
 	
@@ -3335,7 +3337,7 @@ function sed_textbox($name, $value, $size = 56, $maxlength = 255, $class = "text
 
 function sed_textbox_hidden($name, $value, $size = 56, $maxlength = 255, $class = "text", $disabled = false)
 	{
-	sed_textbox($name, $value, $size, $maxlength, $class, $disabled, 'hidden');
+	return sed_textbox($name, $value, $size, $maxlength, $class, $disabled, 'hidden');
 	} 
 
 /** 
@@ -4103,9 +4105,10 @@ function sed_redirect($url, $base64=false)
  * @param string $name Dropdown name 
  * @param array $values Options available
  * @param bool $empty_option Insert first empty element ---  
+ * @param bool $key_isvalue Use value & key from array $values, or only value (if false)  
  * @return string 
  */
-function sed_selectbox($check, $name, $values, $empty_option = true)
+function sed_selectbox($check, $name, $values, $empty_option = true, $key_isvalue = true)
 	{
 	$check = trim($check);
 	
@@ -4120,7 +4123,7 @@ function sed_selectbox($check, $name, $values, $empty_option = true)
 	foreach ($values as $k => $x)
 		{
 		$x = trim($x);
-		$v = ($isarray) ? $k : $x;
+		$v = ($isarray && $key_isvalue) ? $k : $x;
 		$selected = ($v == $check) ? "selected=\"selected\"" : '';
 		$result .= "<option value=\"$v\" $selected>".sed_cc($x)."</option>";
 		}

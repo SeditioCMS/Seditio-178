@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=admin.inc.php
-Version=178
-Updated=2022-jun-12
+Version=179
+Updated=2022-jul-15
 Type=Core.admin
 Author=Seditio Team
 Description=Administration panel
@@ -28,6 +28,7 @@ $w = sed_import('w','P','TXT');
 $u = sed_import('u','P','TXT');
 $s = sed_import('s','G','ALP', 24);
 $msg = sed_import('msg', 'G', 'ALP');
+$num = sed_import('num', 'G', 'INT');
 
 list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = sed_auth('admin', 'any');
 sed_block($usr['auth_read']);

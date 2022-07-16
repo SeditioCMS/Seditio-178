@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=install.config.php
-Version=178
-Updated=2022-jun-12
+Version=179
+Updated=2022-jul-15
 Type=Core.install
 Author=Seditio Team
 Description=Configuration builder
@@ -18,8 +18,8 @@ if ( !defined('SED_CODE') || !defined('SED_INSTALL') ) { die('Wrong URL.'); }
 
 $cfg_data = "<?PHP\n\n/* ====================\n";
 $cfg_data .= "Seditio - Website engine\n";
-$cfg_data .= "Copyright Neocrome\n";
-$cfg_data .= "http://www.neocrome.net\n";
+$cfg_data .= "Copyright Neocrome & Seditio Team\n";
+$cfg_data .= "https://seditio.org\n";
 $cfg_data .= "[BEGIN_SED]\n";
 $cfg_data .= "File=datas/config.php\n";
 $cfg_data .= "Version=".$cfg['version']."\n";
@@ -34,17 +34,18 @@ $cfg_data .= "\n// ========================\n";
 $cfg_data .= "// MySQL database parameters. Change to fit your host.\n";
 $cfg_data .= "// ========================\n";
 
-$cfg_data .= "\n\$cfg['mysqlhost'] = '".$mysqlhost."';		// Database host URL\n";
+$cfg_data .= "\n\$cfg['mysqlhost'] = '".$mysqlhost."';			// Database host URL\n";
 $cfg_data .= "\$cfg['mysqluser'] = '".$mysqluser."';			// Database user\n";
-$cfg_data .= "\$cfg['mysqlpassword'] = '".$mysqlpassword."';			// Database password\n";
-$cfg_data .= "\$cfg['mysqldb'] = '".$mysqldb."';		// Database name\n";
+$cfg_data .= "\$cfg['mysqlpassword'] = '".$mysqlpassword."';	// Database password\n";
+$cfg_data .= "\$cfg['mysqldb'] = '".$mysqldb."';				// Database name\n";
 
 $cfg_data .= "\n// ========================\n";
 $cfg_data .= "// Default skin and default language\n";
 $cfg_data .= "// ========================\n";
 
 $cfg_data .= "\n\$cfg['defaultskin'] = '".$defaultskin."';	// Default skin code. Be SURE it's pointing to a valid folder in /skins/...\n";
-$cfg_data .= "\$cfg['defaultlang'] = '".$defaultlang."';			// Default language code\n";
+$cfg_data .= "\$cfg['defaultlang'] = '".$defaultlang."';	// Default language code\n";
+$cfg_data .= "\$cfg['adminskin'] = 'sympfy';				// Default admin skin\n";
 
 $cfg_data .= "\n// ========================\n";
 $cfg_data .= "// More settings\n";
