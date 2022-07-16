@@ -65,46 +65,46 @@ $skinlang['forumssections']['FoldAll'] = "Tümünü katla";
 $skinlang['forumssections']['UnfoldAll'] = "Hepsini aç";
 
 //forums.topics.tpl
-$skinlang['forumstopics']['Nonewposts'] = "No new posts";
-$skinlang['forumstopics']['Newposts'] = "New posts";
-$skinlang['forumstopics']['Sticky'] = "Sticky";
-$skinlang['forumstopics']['Nonewpostspopular'] = "No new posts (popular)";
-$skinlang['forumstopics']['Newpostspopular'] = "New posts (popular)";
-$skinlang['forumstopics']['Newpostssticky'] = "New posts (sticky)";
-$skinlang['forumstopics']['Locked'] = "Locked";
-$skinlang['forumstopics']['Newpostslocked'] = "New posts (locked)";
-$skinlang['forumstopics']['Announcment'] = "Announcement";
-$skinlang['forumstopics']['Movedoutofthissection'] = "Moved out of this section";
-$skinlang['forumstopics']['Newannouncment'] = "New announcement";
-$skinlang['forumstopics']['Viewers'] = "Viewers";	// New in v120
+$skinlang['forumstopics']['Nonewposts'] = "Yeni gönderi yok";
+$skinlang['forumstopics']['Newposts'] = "Yeni iletiler";
+$skinlang['forumstopics']['Sticky'] = "Yapışkan";
+$skinlang['forumstopics']['Nonewpostspopular'] = "Yeni gönderi yok (popüler)";
+$skinlang['forumstopics']['Newpostspopular'] = "Yeni gönderiler (popüler)";
+$skinlang['forumstopics']['Newpostssticky'] = "Yeni gönderiler (yapışkan)";
+$skinlang['forumstopics']['Locked'] = "Kilitli";
+$skinlang['forumstopics']['Newpostslocked'] = "Yeni gönderiler (kilitli)";
+$skinlang['forumstopics']['Announcment'] = "Duyuru";
+$skinlang['forumstopics']['Movedoutofthissection'] = "Bu bölümden taşındı";
+$skinlang['forumstopics']['Newannouncment'] = "Yeni duyuru";
+$skinlang['forumstopics']['Viewers'] = "izleyiciler";	// New in v120
 
 //header.tpl
-$skinlang['header']['Login'] = "Login here";
-$skinlang['header']['Register'] = "Register";
-$skinlang['header']['Lostyourpassword'] = "Lost your password?";
+$skinlang['header']['Login'] = "Giriş yapın";
+$skinlang['header']['Register'] = "Kayıt ol";
+$skinlang['header']['Lostyourpassword'] = "Şifreni mi unuttun?";
 
 //index.tpl
-$skinlang['index']['Newinforums'] = "From our forums...";
-$skinlang['index']['Recentadditions'] = "What's new ?";
-$skinlang['index']['Polls'] = "Polls";
-$skinlang['index']['Online'] = "Who's online ?";
-$skinlang['index']['Recentcomments'] = "Recent comments";  // New in 175
-$skinlang['index']['Lasttopics'] = "Forums"; // New in 178
-$skinlang['index']['Lastcomments'] = "Comments"; // New in 178
-$skinlang['index']['Lastpages'] = "Pages"; // New in 178
-$skinlang['index']['Activity'] = "Activity"; // New in 178
+$skinlang['index']['Newinforums'] = "forumlarımızdan...";
+$skinlang['index']['Recentadditions'] = "Ne var ne yok ?";
+$skinlang['index']['Polls'] = "Anketler";
+$skinlang['index']['Online'] = "Kim çevrimiçi ?";
+$skinlang['index']['Recentcomments'] = "Son Yorumlar";  // New in 175
+$skinlang['index']['Lasttopics'] = "Forumlar"; // New in 178
+$skinlang['index']['Lastcomments'] = "Yorumlar"; // New in 178
+$skinlang['index']['Lastpages'] = "Sayfalar"; // New in 178
+$skinlang['index']['Activity'] = "Aktivite"; // New in 178
 
 //list.tpl
-$skinlang['list']['Page'] = "Page";
-$skinlang['list']['linesperpage'] = "lines per page";
-$skinlang['list']['linesinthissection'] = "lines in this section";
-$skinlang['list']['Comments'] = "Comments";
-$skinlang['list']['Ratings'] = "Ratings";
-$skinlang['list']['hits'] = "hits";
+$skinlang['list']['Page'] = "Sayfa";
+$skinlang['list']['linesperpage'] = "sayfa başına satır";
+$skinlang['list']['linesinthissection'] = "Bu bölümdeki satırlar";
+$skinlang['list']['Comments'] = "Yorumlar";
+$skinlang['list']['Ratings'] = "Oylamalar";
+$skinlang['list']['hits'] = "hit";
 
 //news.tpl
 $skinlang['news']['by'] = "by";
-$skinlang['news']['title'] = "News";
+$skinlang['news']['title'] = "Haberler";
 
 //page.add.tpl
 $skinlang['pageadd']['Category'] = "Category:";
