@@ -20,49 +20,49 @@ Description=Official skin
 $skinlang['admin']['Help'] = "Yardım:";
 
 //comments.tpl
-$skinlang['comments']['Comment'] = "Comment:";
-$skinlang['comments']['Send'] = "Send";
-$skinlang['comments']['Postedby'] = "Posted by";
-$skinlang['comments']['Commentedit'] = "Edit comment";   //New v173
-$skinlang['comments']['Update'] = "Update";  //New v173
-$skinlang['comments']['Newcomment'] = "New comment";  //New v178
+$skinlang['comments']['Comment'] = "Yorum:";
+$skinlang['comments']['Send'] = "Gönder";
+$skinlang['comments']['Postedby'] = "Yazan";
+$skinlang['comments']['Commentedit'] = "Yorum düzenle";   //New v173
+$skinlang['comments']['Update'] = "Güncelle";  //New v173
+$skinlang['comments']['Newcomment'] = "Yeni yorum";  //New v178
 
 //forums.editpost.tpl
-$skinlang['forumseditpost']['Update'] = "Update";
+$skinlang['forumseditpost']['Update'] = "Güncelle";
 
 //forums.newtopic.tpl
-$skinlang['forumsnewtopic']['Title'] = "Title:";
-$skinlang['forumsnewtopic']['Desc'] = "Short description (optional):";
-$skinlang['forumsnewtopic']['privatetopic'] = "Check this box to mark this topic as \"private\":";
-$skinlang['forumsnewtopic']['privatetopic2'] = "Only forums moderators and the starter of the topic (so you) will be allowed to read and reply.";
-$skinlang['forumsnewtopic']['Submit'] = "Submit";
+$skinlang['forumsnewtopic']['Title'] = "Başlık:";
+$skinlang['forumsnewtopic']['Desc'] = "Kısa açıklama (isteğe bağlı):";
+$skinlang['forumsnewtopic']['privatetopic'] = "Bu konuyu özel olarak işaretlemek için bu kutuyu işaretleyin:";
+$skinlang['forumsnewtopic']['privatetopic2'] = "Sadece forum moderatörlerinin ve konuyu başlatanların (sizin) okumasına ve cevaplamasına izin verilecektir..";
+$skinlang['forumsnewtopic']['Submit'] = "Gönder";
 
 //forums.post.tpl
-$skinlang['forumspost']['privatetopic'] = "This topic is private, only moderators and the starter of the topic can read and reply here.";
-$skinlang['forumspost']['Author'] = "Author";
-$skinlang['forumspost']['Message'] = "Message";
-$skinlang['forumspost']['Onlinestatus'] = "Online status";
-$skinlang['forumspost']['posts'] = "posts";
-$skinlang['forumspost']['Location'] = "Location:";
-$skinlang['forumspost']['Occupation'] = "Occupation:";
-$skinlang['forumspost']['Age'] = "Age:";
-$skinlang['forumspost']['Reply'] = "Reply";
+$skinlang['forumspost']['privatetopic'] = "Bu konu özeldir, sadece moderatörler ve konuyu başlatanlar burayı okuyup cevaplayabilir..";
+$skinlang['forumspost']['Author'] = "Yazan";
+$skinlang['forumspost']['Message'] = "Mesaj";
+$skinlang['forumspost']['Onlinestatus'] = "Çevrimiçi durum";
+$skinlang['forumspost']['posts'] = "mesaj";
+$skinlang['forumspost']['Location'] = "Konum:";
+$skinlang['forumspost']['Occupation'] = "Meslek:";
+$skinlang['forumspost']['Age'] = "Yaş:";
+$skinlang['forumspost']['Reply'] = "Cevapla";
 
 //forums.sections.tpl
-$skinlang['forumssections']['Options'] = "Options...";
-$skinlang['forumssections']['Searchinforums'] = "Search in forums";
-$skinlang['forumssections']['Statistics'] = "Statistics";
-$skinlang['forumssections']['Moderators'] = "Moderators";
-$skinlang['forumssections']['Markasread'] = "Mark all posts as read";
-$skinlang['forumssections']['Sections'] = "Sections";
-$skinlang['forumssections']['Subforums'] = "Subforums"; //New in Sed 172
-$skinlang['forumssections']['Lastpost'] = "Last post";
-$skinlang['forumssections']['Topics'] = "Topics";
-$skinlang['forumssections']['Posts'] = "Posts";
-$skinlang['forumssections']['Views'] = "Views";
-$skinlang['forumssections']['Activity'] = "Activity";
-$skinlang['forumssections']['FoldAll'] = "Fold all";
-$skinlang['forumssections']['UnfoldAll'] = "Unfold all";
+$skinlang['forumssections']['Options'] = "Seçenekler...";
+$skinlang['forumssections']['Searchinforums'] = "Forumlarda ara";
+$skinlang['forumssections']['Statistics'] = "İstatistik";
+$skinlang['forumssections']['Moderators'] = "Moderatörler";
+$skinlang['forumssections']['Markasread'] = "Tüm gönderileri okundu olarak işaretle";
+$skinlang['forumssections']['Sections'] = "Bölümler";
+$skinlang['forumssections']['Subforums'] = "Alt forumlar"; //New in Sed 172
+$skinlang['forumssections']['Lastpost'] = "Son mesaj";
+$skinlang['forumssections']['Topics'] = "Konular";
+$skinlang['forumssections']['Posts'] = "Mesajlar";
+$skinlang['forumssections']['Views'] = "İzlenim";
+$skinlang['forumssections']['Activity'] = "Aktivite";
+$skinlang['forumssections']['FoldAll'] = "Tümünü katla";
+$skinlang['forumssections']['UnfoldAll'] = "Hepsini aç";
 
 //forums.topics.tpl
 $skinlang['forumstopics']['Nonewposts'] = "No new posts";
