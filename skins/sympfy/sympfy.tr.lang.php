@@ -107,30 +107,30 @@ $skinlang['news']['by'] = "by";
 $skinlang['news']['title'] = "Haberler";
 
 //page.add.tpl
-$skinlang['pageadd']['Category'] = "Category:";
-$skinlang['pageadd']['Title'] = "Title:";
-$skinlang['pageadd']['Description'] = "Description:";
-$skinlang['pageadd']['Author'] = "Author:";
-$skinlang['pageadd']['Extrakey'] = "Extra key (optional):";
+$skinlang['pageadd']['Category'] = "Kategori:";
+$skinlang['pageadd']['Title'] = "Başlık:";
+$skinlang['pageadd']['Description'] = "Açıklama:";
+$skinlang['pageadd']['Author'] = "Yazar:";
+$skinlang['pageadd']['Extrakey'] = "Ekstra anahtar (isteğe bağlı):";
 $skinlang['pageadd']['Alias'] = "Alias:";
-$skinlang['pageadd']['Owner'] = "Owner:";
-$skinlang['pageadd']['Begin'] = "Begin:";
-$skinlang['pageadd']['Expire'] = "Expire:";
-$skinlang['pageadd']['Bodyofthepage'] = "Body of the page:";
-$skinlang['pageadd']['File'] = "File download?";
-$skinlang['pageadd']['Filehint'] = "(Set 'yes' to enable the download module at bottom of the page, and fill up the 2 fields below)";
+$skinlang['pageadd']['Owner'] = "Sahip:";
+$skinlang['pageadd']['Begin'] = "Başlama:";
+$skinlang['pageadd']['Expire'] = "Bitiş:";
+$skinlang['pageadd']['Bodyofthepage'] = "Yazı alanı:";
+$skinlang['pageadd']['File'] = "Dosya indirme?";
+$skinlang['pageadd']['Filehint'] = "(Sayfanın alt kısmındaki indirme modülünü etkinleştirmek için 'evet'i seçin ve aşağıdaki 2 alanı doldurun)";
 $skinlang['pageadd']['URL'] = "URL:";
-$skinlang['pageadd']['URLhint'] = "(If File download=Yes, else leave empty)";
-$skinlang['pageadd']['Filesize'] = "Filesize (KB):";
-$skinlang['pageadd']['Filesizehint'] = "(If File download=Yes, else leave empty)";
-$skinlang['pageadd']['Formhint'] = "Once your submission is done, the page will be placed in the validation queue and will be hidden, awaiting confirmation from a site administrator or global moderator before being displayed in the right section.<br />Check all fields carefully, you won't be able to change it later.<br />If you really need to change something, ask a moderator or an administrator.";
-$skinlang['pageadd']['Submit'] = "Submit";
-$skinlang['pageadd']['Publish'] = "Publish"; // New v173
-$skinlang['pageadd']['Parsing'] = "Parsing:"; // New v173
-$skinlang['pageadd']['Thumbs'] = "Thumbnails:"; // New v178
+$skinlang['pageadd']['URLhint'] = "(Dosya indir=Hayır ise boş bırakın)";
+$skinlang['pageadd']['Filesize'] = "Dosya boyutu (KB):";
+$skinlang['pageadd']['Filesizehint'] = "(Dosya indir=Hayır ise boş bırakın)";
+$skinlang['pageadd']['Formhint'] = "Gönderiminiz tamamlandıktan sonra, sayfa doğrulama kuyruğuna yerleştirilecek ve doğru bölümde görüntülenmeden önce bir site yöneticisinden veya global moderatörden onay bekleyenlerde gizlenecek..<br />Tüm alanları dikkatlice kontrol edin, daha sonra değiştiremezsiniz.<br />Gerçekten bir şeyi değiştirmeniz gerekiyorsa, bir moderatöre veya yöneticiye sorun..";
+$skinlang['pageadd']['Submit'] = "Gönder";
+$skinlang['pageadd']['Publish'] = "Yayınla"; // New v173
+$skinlang['pageadd']['Parsing'] = "Ayrıştırma:"; // New v173
+$skinlang['pageadd']['Thumbs'] = "Küçük Resimler:"; // New v178
 
-$skinlang['pageadd']['Allowcomments'] = "Allow comments?"; // New v173
-$skinlang['pageadd']['Allowratings'] = "Allow rating change?"; // New v173
+$skinlang['pageadd']['Allowcomments'] = "Yorumlara izin ver?"; // New v173
+$skinlang['pageadd']['Allowratings'] = "Derecelendirme değişikliğine izin ver?"; // New v173
 
 //page.edit.tpl
 $skinlang['pageedit']['Category'] = "Category:";
@@ -316,34 +316,34 @@ $skinlang['usersprofile']['Newpasswordhint'] = "(Leave empty to keep<br />the cu
 $skinlang['usersprofile']['Update'] = "Update";
 
 //users.register.tpl
-$skinlang['usersregister']['Username'] = "Login:";
-$skinlang['usersregister']['Userfirstname'] = "User first name:";
-$skinlang['usersregister']['Userlastname'] = "User last name:";
-$skinlang['usersregister']['Validemail'] = "Valid email:";
-$skinlang['usersregister']['Validemailhint'] = "A valid email is required to complete the registration process !";
-$skinlang['usersregister']['Password'] = "Password:";
-$skinlang['usersregister']['Confirmpassword'] = "Confirm password:";
-$skinlang['usersregister']['Country'] = "Country:";
-$skinlang['usersregister']['Formhint'] = "Once you're registered and logged in, you can have a look in your profile to set more infos about you.";
-$skinlang['usersregister']['Submit'] = "Submit";
+$skinlang['usersregister']['Username'] = "Giriş:";
+$skinlang['usersregister']['Userfirstname'] = "İsim:";
+$skinlang['usersregister']['Userlastname'] = "Soyisim:";
+$skinlang['usersregister']['Validemail'] = "Geçerli e-posta:";
+$skinlang['usersregister']['Validemailhint'] = "Kayıt işlemini tamamlamak için geçerli bir e-posta gereklidir !";
+$skinlang['usersregister']['Password'] = "Şifre:";
+$skinlang['usersregister']['Confirmpassword'] = "Tekrar şifre:";
+$skinlang['usersregister']['Country'] = "Ülke:";
+$skinlang['usersregister']['Formhint'] = "Kaydolduktan ve giriş yaptıktan sonra, hakkınızda daha fazla bilgi ayarlamak için profilinize bakabilirsiniz..";
+$skinlang['usersregister']['Submit'] = "Gönder";
 
 //users.tpl
-$skinlang['users']['Page'] = "Page";
-$skinlang['users']['usersperpage'] = "users per page";
-$skinlang['users']['usersinthissection'] = "users in this section";
+$skinlang['users']['Page'] = "Sayfa";
+$skinlang['users']['usersperpage'] = "sayfa başına kullanıcı";
+$skinlang['users']['usersinthissection'] = "Bu bölümdeki kullanıcılar";
 
 //maintenance.tpl
-$skinlang['maintenance']['Username'] = "User name:";
-$skinlang['maintenance']['Password'] = "Password:";
-$skinlang['maintenance']['Login'] = "Login";
+$skinlang['maintenance']['Username'] = "Kullanıcı adı:";
+$skinlang['maintenance']['Password'] = "Şifre:";
+$skinlang['maintenance']['Login'] = "Giriş";
 
 //admintooltip.js
-$skinlang['admintooltip']['pageadd'] = "Add page";
-$skinlang['admintooltip']['pageedit'] = "Edit page";
-$skinlang['admintooltip']['pageeditcategory'] = "Edit category";
-$skinlang['admintooltip']['pageeditoption'] = "Edit config option";
+$skinlang['admintooltip']['pageadd'] = "Sayfa ekle";
+$skinlang['admintooltip']['pageedit'] = "Sayfayı düzenle";
+$skinlang['admintooltip']['pageeditcategory'] = "Kategoriyi düzenle";
+$skinlang['admintooltip']['pageeditoption'] = "Yapılandırma seçeneğini düzenle";
 
 //service.message.tpl
-$skinlang['message']['gohome'] = "Go home";
+$skinlang['message']['gohome'] = "Eve git";
 
 ?>
