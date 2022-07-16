@@ -12,13 +12,13 @@ CKEDITOR.editorConfig = function( config )
 	}
 	
 	config.uploadUrl = 'plug.php?ajx=ckeditor';
-	config.filebrowserUploadUrl = '/plug.php?ajx=ckeditor&fl=filebrowser';
+	config.filebrowserUploadUrl = 'plug.php?ajx=ckeditor&fl=filebrowser';
 
 	config.pasteUploadFileApi = 'plug.php?ajx=ckeditor';
 	config.pasteUploadImageUrlApi = 'plug.php?ajx=ckeditor';
 	config.filebrowserImageUploadUrl = 'plug.php?ajx=ckeditor';
 	
-	config.contentsCss = ['/plugins/ckeditor/lib4/ckeditor.css?v=1'];
+	config.contentsCss = ['plugins/ckeditor/lib4/ckeditor.css?v=1'];
 	
 	config.layoutmanager_loadbootstrap = false;
 
