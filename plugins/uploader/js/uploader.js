@@ -116,7 +116,7 @@
 			jQuery.data(holdername, "already_uploaded", jQuery.data(holdername, "already_uploaded")-1);
 			
 			$.ajax({
-				url: "/plug/?ajx=uploader&upl_delete=" + encodeURIComponent($(this).parent().attr('filename'))
+				url: "plug/?ajx=uploader&upl_delete=" + encodeURIComponent($(this).parent().attr('filename'))
 			});			
 			
 			$(this).parent().fadeOut("slow", function() {
@@ -142,7 +142,7 @@
 			var context = this;
 			
 			$.ajax({
-				url: "/plug/?ajx=uploader&upl_rotate=" + encodeURIComponent($(this).parent().attr('filename'))+"&upl_degree_lvl=" + $(this).closest('.rotate_picture').attr('degree-lvl')
+				url: "plug/?ajx=uploader&upl_rotate=" + encodeURIComponent($(this).parent().attr('filename'))+"&upl_degree_lvl=" + $(this).closest('.rotate_picture').attr('degree-lvl')
 			}).done(function(file_name) {
 				$img = $('html,body').find("input[value^='"+file_name+"']").prev('img');				
 				if (parseInt($(context).closest('.rotate_picture').attr('degree-lvl')) > 3)  {
