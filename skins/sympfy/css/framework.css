@@ -1466,16 +1466,17 @@ input::placeholder { color: #bbbdbf; }
 
 .btn-icon {
 	width: 24px;
-    height: 24px;
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 25px;
-    border-radius: 2px;
-    background-color: #315eb4;
-    color: #ffffff;
-    border: 1px solid #133d8d;
-	text-decoration:none;
+	height: 24px;
+	padding: 4px 0px;
+	text-align: center;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 12px;
+	border-radius: 2px;
+	background-color: #315eb4;
+	color: #ffffff;
+	border: 1px solid #133d8d;
+	text-decoration: none;
 }
 
 .btn-icon:hover,
@@ -1486,6 +1487,20 @@ input::placeholder { color: #bbbdbf; }
 	text-decoration:none;
 	color: #ffffff;
 } 
+
+.dsl-icon {
+	width: 24px;
+    height: 24px;
+	padding: 4px 0px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 12px;
+    border-radius: 2px;
+    color: #315eb4;
+    border: 1px solid #cccccc;
+	text-decoration:none;	
+}
 
 blockquote {
 	color: #999999;
