@@ -142,11 +142,6 @@ if ($cfg['plugin']['news']['maxpages']>0 && !empty($cfg['plugin']['news']['categ
 			"PAGE_ROW_CATDESC" => $sed_cat[$pag['page_cat']]['desc'],
 			"PAGE_ROW_CATICON" => $sed_cat[$pag['page_cat']]['icon'],
 			"PAGE_ROW_KEY" => sed_cc($pag['page_key']),
-			"PAGE_ROW_EXTRA1" => sed_cc($pag['page_extra1']),
-			"PAGE_ROW_EXTRA2" => sed_cc($pag['page_extra2']),
-			"PAGE_ROW_EXTRA3" => sed_cc($pag['page_extra3']),
-			"PAGE_ROW_EXTRA4" => sed_cc($pag['page_extra4']),
-			"PAGE_ROW_EXTRA5" => sed_cc($pag['page_extra5']),
 			"PAGE_ROW_DESC" => sed_cc($pag['page_desc']),
 			"PAGE_ROW_AUTHOR" => (!empty($pag['page_author'])) ? sed_cc($pag['page_author']) : sed_cc($pag['user_name']),
 			"PAGE_ROW_OWNER" => sed_build_user($pag['page_ownerid'], sed_cc($pag['user_name']), $pag['user_maingrp']),
@@ -160,7 +155,7 @@ if ($cfg['plugin']['news']['maxpages']>0 && !empty($cfg['plugin']['news']['categ
 			"PAGE_ROW_COMMENTS" => $pag['page_comments'],
 			"PAGE_ROW_COMMENTS_URL" => $pag['page_pageurlcom'],
 			"PAGE_ROW_COMMENTS_COUNT" => $pag['page_comcount'],				
-			"PAGE_ROW_RATINGS" => "<a href=\"".$pag['page_pageurlrat']."\"><img src=\"skins/".$usr['skin']."/img/system/vote".round($pag['rating_average'],0).".gif\" alt=\"\" /></a>",
+			"PAGE_ROW_RATINGS" => "<a href=\"".$pag['page_pageurlrat']."\"><img src=\"skins/".$usr['skin']."/img/system/vote".round($pag['page_rating'],0).".gif\" alt=\"\" /></a>",
 			"PAGE_ROW_ODDEVEN" => sed_build_oddeven($jj)
 		));
 				

@@ -16,7 +16,7 @@ Description=Common
 
 if (!defined('SED_CODE')) { die('Wrong URL.'); }
 
-error_reporting(E_ALL ^ E_NOTICE);  
+error_reporting(E_ALL ^ E_NOTICE);
 
 /* ======== Connect to the SQL DB======== */
 
@@ -169,7 +169,7 @@ If (sed_sql_numrows($sql) > 0)
 
 /* ======== Groups ======== */
 
-if (!$sed_groups )
+if (!isset($sed_groups))
 	{
 	$sql = sed_sql_query("SELECT * FROM $db_groups WHERE grp_disabled=0 ORDER BY grp_level DESC");
 
@@ -183,7 +183,7 @@ if (!$sed_groups )
 				'level' => $row['grp_level'],
  				'disabled' => $row['grp_disabled'],
  				'hidden' => $row['grp_hidden'],
-				'state' => $row['grp_state'],
+				//'state' => $row['grp_state'],
 				'title' => sed_cc($row['grp_title']),
 				'desc' => sed_cc($row['grp_desc']),
 				'icon' => $row['grp_icon'],
@@ -191,7 +191,7 @@ if (!$sed_groups )
 				'pfs_maxfile' => $row['grp_pfs_maxfile'],
 				'pfs_maxtotal' => $row['grp_pfs_maxtotal'],
 				'ownerid' => $row['grp_ownerid']
-					);
+				);
 			}
 		}
 	else
@@ -257,7 +257,9 @@ if ($rsedition>0 && $cfg['authmode'] > 0)
 			$usr['auth'] = unserialize($row['user_auth']);
 			$usr['level'] = $sed_groups[$usr['maingrp']]['level'];
 			$usr['profile'] = $row;
-		
+			$sys['sql_update_lastvisit'] = '';
+			$sys['sql_update_auth'] = '';
+			
 			if ($usr['lastlog']+$cfg['timedout'] < $sys['now_offset'])
 				{
 				$sys['comingback']= TRUE;
@@ -306,15 +308,15 @@ $b = sed_import('b', 'G', 'ALP', 24);
 
 /* ======== Plugins ======== */
 
-if (!$sed_plugins)
+if (!isset($sed_plugins))
 	{
 	$sql = sed_sql_query("SELECT * FROM $db_plugins WHERE pl_active=1 ORDER BY pl_hook ASC, pl_order ASC");
 	if (sed_sql_numrows($sql) > 0)
 		{
 		while ($row = sed_sql_fetcharray($sql))
 			{
-			$sed_plugins[] = $row; 
-			$sed_plugins[$row['pl_code']]['pl_title'] = $row['pl_title'];
+			$sed_plugins[$row['pl_hook']][] = $row; 
+			//$sed_plugins[$row['pl_code']]['pl_title'] = $row['pl_title'];
 			}
 		}
 	sed_cache_store('sed_plugins', $sed_plugins, 3300);
@@ -369,7 +371,7 @@ if (!$cfg['disablewhosonline'])
 	$sql = sed_sql_query("SELECT online_name, online_userid FROM $db_online WHERE online_name NOT LIKE 'v' ORDER BY online_name ASC");
 	$sys['whosonline_reg_count'] = sed_sql_numrows($sql);
 	$sys['whosonline_all_count'] = $sys['whosonline_reg_count'] + $sys['whosonline_vis_count'];
-
+	$out['whosonline_reg_list'] = '';
 	$ii = 0;
 	while ($row = sed_sql_fetchassoc($sql))
 		{
@@ -391,7 +393,7 @@ if (!$cfg['disablewhosonline'] || $cfg['shieldenabled'])
 
 		if ($row = sed_sql_fetchassoc($sql))
 			{
-  		$online_count = 1;
+			$online_count = 1;
 
 			if ($cfg['shieldenabled'])
 				{
@@ -557,7 +559,7 @@ if (!$cfg['disablehitstats'])
 	else
 		{ sed_stat_create($sys['day']); }
 
-	$sys['referer'] = mb_substr(mb_strtolower($_SERVER['HTTP_REFERER']), 0, 255);
+	$sys['referer'] = isset($_SERVER['HTTP_REFERER']) ? mb_substr(mb_strtolower($_SERVER['HTTP_REFERER']), 0, 255) : '';
 	$sys['httphost'] = mb_strtolower($_SERVER['HTTP_HOST']); // New Sed175
 
 	if (!empty($sys['referer'])
@@ -592,7 +594,7 @@ if (!$cfg['disablehitstats'])
 
 /* ======== Categories ======== */
 
-if (!$sed_cat && !$cfg['disable_page'])
+if (!isset($sed_cat) && !$cfg['disable_page'])
 	{
 	$sed_cat = sed_load_structure();
 	sed_cache_store('sed_cat', $sed_cat, 3600);
@@ -600,7 +602,7 @@ if (!$sed_cat && !$cfg['disable_page'])
 
 /* ======== Forums ======== */
 
-if (!$sed_forums_str && !$cfg['disable_forums'])
+if (!isset($sed_forums_str) && !$cfg['disable_forums'])
 	{
 	$sed_forums_str = sed_load_forum_structure();
 	sed_cache_store('sed_forums_str', $sed_forums_str, 3600);
@@ -611,7 +613,7 @@ if (!$sed_forums_str && !$cfg['disable_forums'])
 $dic_type = array(1 => 'select', 2 => 'radio', 3 => 'checkbox',  4 => 'textinput', 5 => 'textarea');
 $dic_var_type = array('varchar' => 'TXT', 'text' => 'HTM', 'int' => 'INT', 'tinyint' => 'INT', 'boolean' => 'BOL');
 
-if (!$sed_dic && (sed_stat_get("version") >= 177))
+if (!isset($sed_dic) && (sed_stat_get("version") >= 177))
 	{
 	// Load directories
 	$sql = sed_sql_query("SELECT * FROM $db_dic");
@@ -664,7 +666,7 @@ if (!$sed_dic && (sed_stat_get("version") >= 177))
 	
 /* ======== Menus ======== */
 
-if (!$sed_menu && (sed_stat_get("version") > 177))
+if (!isset($sed_menu) && (sed_stat_get("version") > 177))
 	{	
 	$sql = sed_sql_query("SELECT * FROM sed_menu WHERE 1 ORDER BY menu_position ASC");
 	while ($row = sed_sql_fetchassoc($sql))
@@ -685,7 +687,7 @@ if (!$sed_menu && (sed_stat_get("version") > 177))
 
 /* ======== Smilies ======== */
 
-if (!$sed_smilies)
+if (!isset($sed_smilies))
 	{
 	$sql = sed_sql_query("SELECT * FROM $db_smilies ORDER by smilie_order ASC, smilie_id ASC");
 	 if (sed_sql_numrows($sql)>0)

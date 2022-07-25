@@ -26,6 +26,8 @@ $out['logstatus'] = ($usr['id']>0) ? $L['hea_youareloggedas'].' '.$usr['name'] :
 $out['userlist'] = (sed_auth('users', 'a', 'R')) ? "<a href=\"".sed_url("users")."\">".$L['hea_users']."</a>" : '';
 $out['metas'] = sed_htmlmetas($out['subdesc'], $out['subkeywords']).$moremetas;
 $out['compopup'] = sed_javascript($morejavascript);
+$out['pmreminder'] = '';
+$out['adminpanel'] = '';
 
 /**/
 $title_tags[] = array('{MAINTITLE}', '{SUBTITLE}');
@@ -34,7 +36,7 @@ $title_data = array($cfg['maintitle'], $cfg['subtitle']);
 $out['subtitle'] = (empty($out['subtitle'])) ? sed_title('defaulttitle', $title_tags, $title_data) : $out['subtitle'];
 /**/
 
-$out['currenturl'] .= sed_getcurrenturl();
+$out['currenturl'] = sed_getcurrenturl();
 $out['canonical_url'] = empty($out['canonical_url']) ? str_replace('&', '&amp;', $sys['canonical_url']) : $out['canonical_url'];  // New in 175
 $out['register_link'] = sed_url("users", "m=register");  // New in 175
 $out['auth_link'] = sed_url("users", "m=auth");  // New in 175
@@ -65,9 +67,9 @@ if (is_array($extp))
 /* ===== */
 
 if ($cfg['enablecustomhf'])
-	{ $mskin = sed_skinfile(array('header', mb_strtolower($location)), $adminskin); }
+	{ $mskin = sed_skinfile(array('header', mb_strtolower($location))); }
 else
-	{ $mskin = sed_skinfile('header', $adminskin); }
+	{ $mskin = sed_skinfile('header'); }
 	
 $t = new XTemplate($mskin);
 
