@@ -1902,7 +1902,7 @@ function sed_captcha_image($code)
 function sed_cc($text, $ent_quotes = null, $bbmode = FALSE)
 	{
 	global $cfg;
-
+	$text = is_null($text) ? '' : $text;
 	if (!$bbmode) {
 		return is_null($ent_quotes) ? htmlspecialchars($text) : htmlspecialchars($text, ENT_QUOTES);
 		} 
@@ -1954,16 +1954,18 @@ function sed_check_xp()
  * @param bool $more Forward OR backward
  * @return string 
  */ 
-function sed_checkmore($text, $more = false) 
+function sed_checkmore($text = '', $more = false) 
 	{
-  global $cfg;  
-  
+	global $cfg;  
+
+	$text = (is_null($text)) ? '' : $text;
+	
 	if ($more == true) 
-    { $text = preg_replace('/(\<hr id="readmore"(.*?)?\>)/' ,'<!--readmore-->', $text);	}
-  else 
-    { $text = preg_replace('/(\<!--readmore--\>)/' ,'<hr id="readmore" />', $text); }
-  
-  return($text);
+		{ $text = preg_replace('/(\<hr id="readmore"(.*?)?\>)/' ,'<!--readmore-->', $text);	}
+	else 
+		{ $text = preg_replace('/(\<!--readmore--\>)/' ,'<hr id="readmore" />', $text); }
+
+	return($text);
 	}
 
 /** 
@@ -2595,8 +2597,11 @@ function sed_forum_sectionsetlast($id)
 	global $db_forum_topics, $db_forum_sections;
 
 	$sql = sed_sql_query("SELECT ft_id, ft_lastposterid, ft_lastpostername, ft_updated, ft_title, ft_poll FROM $db_forum_topics WHERE ft_sectionid='$id' AND ft_movedto='0' and ft_mode='0' ORDER BY ft_updated DESC LIMIT 1");
-	$row = sed_sql_fetchassoc($sql);
-	$sql = sed_sql_query("UPDATE $db_forum_sections SET fs_lt_id=".(int)$row['ft_id'].", fs_lt_title='".sed_sql_prep($row['ft_title'])."', fs_lt_date=".(int)$row['ft_updated'].", fs_lt_posterid=".(int)$row['ft_lastposterid'].", fs_lt_postername='".sed_sql_prep($row['ft_lastpostername'])."' WHERE fs_id='$id'");
+	if (sed_sql_numrows($sql) > 0)
+		{
+		$row = sed_sql_fetchassoc($sql);
+		$sql = sed_sql_query("UPDATE $db_forum_sections SET fs_lt_id=".(int)$row['ft_id'].", fs_lt_title='".sed_sql_prep($row['ft_title'])."', fs_lt_date=".(int)$row['ft_updated'].", fs_lt_posterid=".(int)$row['ft_lastposterid'].", fs_lt_postername='".sed_sql_prep($row['ft_lastpostername'])."' WHERE fs_id='$id'");
+		}
 	return;
 	}
 	
@@ -3041,14 +3046,14 @@ function sed_image_resize($img_big, $img_small, $small_x, $extension, $jpegquali
  * @param bool $dieonerror Die with fatal error on wrong input 
  * @return mixed 
  */ 
-function sed_import($name, $source, $filter, $maxlen=0, $dieonerror=FALSE)
+function sed_import($name, $source, $filter, $maxlen = 0, $dieonerror=FALSE)
 	{
   global $cfg;
   
 	switch($source)
 		{
 		case 'G':
-		$v = (isset($_GET[$name])) ? $_GET[$name] :NULL;
+		$v = (isset($_GET[$name])) ? $_GET[$name] : NULL;
 		$log = TRUE;
 		break;
 
@@ -3073,31 +3078,31 @@ function sed_import($name, $source, $filter, $maxlen=0, $dieonerror=FALSE)
 		break;
 		}
 
-	if ($v=='' || $v == NULL)
+	if ($v == '' || $v == NULL)
 		{ return($v); }
 
-	if ($maxlen>0)
+	if ($maxlen > 0)
 		{ $v = mb_substr($v, 0, $maxlen); }
 
 	$pass = FALSE;
 	$defret = NULL;
-	$filter = ($filter=='STX') ? 'TXT' : $filter;
+	$filter = ($filter == 'STX') ? 'TXT' : $filter;
 
 	switch($filter)
 		{
 		case 'INT':
-		if (is_numeric($v)==TRUE && floor($v)==$v)
+		if (is_numeric($v) == TRUE && floor($v) == $v)
 	       	{ $pass = TRUE; }
 		break;
 
 		case 'NUM':
-		if (is_numeric($v)==TRUE)
+		if (is_numeric($v) == TRUE)
 	       	{ $pass = TRUE; }
 		break;
 
 		case 'TXT':
 		$v = trim($v);
-		if (mb_strpos($v, '<')===FALSE)
+		if (mb_strpos($v, '<') === FALSE)
 	       	{ $pass = TRUE; }
 		else
 			{ $defret = str_replace('<', '&lt;', $v); }
@@ -3172,12 +3177,12 @@ function sed_import($name, $source, $filter, $maxlen=0, $dieonerror=FALSE)
 		break;
 
 		case 'BOL':
-		if ($v=="1" || $v=="on")
+		if ($v == "1" || $v == "on")
 	       	{
 	       	$pass = TRUE;
 	       	$v = "1";
 	       	}
-		elseif ($v=="0" || $v=="off")
+		elseif ($v == "0" || $v == "off")
 	       	{
 	       	$pass = TRUE;
 	       	$v = "0";
@@ -3189,7 +3194,7 @@ function sed_import($name, $source, $filter, $maxlen=0, $dieonerror=FALSE)
 		break;
 
 		case 'LVL':
-		if (is_numeric($v)==TRUE && $v>=0 && $v<=100 && floor($v)==$v)
+		if (is_numeric($v) == TRUE && $v >= 0 && $v <= 100 && floor($v) == $v)
 	       	{ $pass = TRUE; }
 		else
 			{ $defret = NULL; }
@@ -4142,12 +4147,13 @@ function sed_redirect($url, $base64=false)
  * @param bool $key_isvalue Use value & key from array $values, or only value (if false)  
  * @return string 
  */
-function sed_selectbox($check, $name, $values, $empty_option = true, $key_isvalue = true)
+function sed_selectbox($check, $name, $values, $empty_option = TRUE, $key_isvalue = TRUE)
 	{
 	$check = trim($check);
 	
+	$isarray = FALSE;
 	if (is_array($values))  
-		{ $isarray = true; } 
+		{ $isarray = TRUE; } 
 	else 
 		{ $values = explode(',', $values); }
 	
@@ -4238,7 +4244,7 @@ function sed_selectbox_countries($check,$name)
 	$result =  "<select name=\"$name\" size=\"1\">";
 	foreach($sed_countries as $i => $x)
 		{
-		$selected = ($i==$check) ? "selected=\"selected\"" : '';
+		$selected = ($i == $check) ? "selected=\"selected\"" : '';
 		$result .= "<option value=\"$i\" $selected>".$x."</option>";
 		}
 	$result .= "</select>";
@@ -4548,7 +4554,7 @@ function sed_radiobox_skin($check, $name)
 		}
 	closedir($handle);
 	sort($skinlist);
-
+	$result = '';
 	foreach ($skinlist as $i => $x)
 		{
 		$checked = ($x == $check) ? "checked=\"checked\"" : '';
@@ -5222,7 +5228,7 @@ function sed_url($section, $params = '', $anchor = '', $header = false, $enablea
 		}
 		
   $url = ($header || ($enableamp == false)) ? $url : str_replace('&', '&amp;', $url);
-  $path = ($header || ($cfg['absurls'] && $enableamp)) ? $sys['abs_url'] : '';	  
+  $path = ($header || (isset($cfg['absurls']) && $cfg['absurls'] && $enableamp)) ? $sys['abs_url'] : '';	  
   return($path.$url.$anchor);
 }
 
