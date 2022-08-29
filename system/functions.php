@@ -3204,8 +3204,15 @@ function sed_load_forum_structure()
 function sed_log($text, $group = 'def')
 	{
 	global $db_logger, $sys, $usr, $_SERVER;
+        $log_text_errormsg = sed_sql_prep($text);
+        $log_text_request = sed_sql_prep(' - '.$_SERVER['REQUEST_URI']);
+        $log_text = $log_text_errormsg . $log_text_request;
+        if (strlen($log_text) > 255) {
+            $log_text_errormsg = substr($log_text_errormsg,0,255 - strlen($log_text_request));
+            $log_text = $log_text_errormsg . $log_text_request;
+        }
 
-	$sql = sed_sql_query("INSERT INTO $db_logger (log_date, log_ip, log_name, log_group, log_text) VALUES (".(int)$sys['now_offset'].", '".$usr['ip']."', '".sed_sql_prep($usr['name'])."', '$group', '".sed_sql_prep($text.' - '.$_SERVER['REQUEST_URI'])."')");
+        $sql = sed_sql_query("INSERT INTO $db_logger (log_date, log_ip, log_name, log_group, log_text) VALUES (".(int)$sys['now_offset'].", '".$usr['ip']."', '".sed_sql_prep($usr['name'])."', '$group', '$log_text')");
 	return;
 	}
 
