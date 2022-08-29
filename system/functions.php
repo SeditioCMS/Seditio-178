@@ -3068,7 +3068,7 @@ function sed_is_bot()
 function sed_javascript($more='')
 	{
 	$result = "<script type=\"text/javascript\" src=\"system/javascript/core.js\"></script>\n";
-	$result .= (!empty($more)) ? "<script type=\"text/javascript\"> <!-- ".$more." //-->  </script>" : '';
+        $result .= (!empty($more)) ? $more : '';
 	return ($result);
 	}
 
