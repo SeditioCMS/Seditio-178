@@ -1998,7 +1998,7 @@ function sed_checkmore($text = '', $more = false)
  * @param int $l Length 
  * @return string 
  */ 
-function sed_cutstring($res, $l)
+function sed_cutstring($res, $l, $ellipsis = '...')
 	{
 	global $cfg;
 
@@ -2006,12 +2006,12 @@ function sed_cutstring($res, $l)
 	if ($enc == 'utf-8')
 		{
 		if(mb_strlen($res) > $l)
-			{ $res = mb_substr($res, 0, ($l-3), $enc).'...'; }
+			{ $res = mb_substr($res, 0, ($l - mb_strlen($ellipsis)), $enc).$ellipsis; }
 		}
 	else
 		{
 		if(mb_strlen($res)>$l)
-			{ $res = mb_substr($res, 0, ($l-3)).'...'; }
+			{ $res = mb_substr($res, 0, ($l - mb_strlen($ellipsis))).$ellipsis; }
 		}
   return($res);
   }
@@ -3065,10 +3065,10 @@ function sed_is_bot()
  * @param string $more Extra javascript 
  * @return string 
  */ 
-function sed_javascript($more='')
+function sed_javascript($more = '')
 	{
 	$result = "<script type=\"text/javascript\" src=\"system/javascript/core.js\"></script>\n";
-        $result .= (!empty($more)) ? $more : '';
+	$result .= (!empty($more)) ? "<script type=\"text/javascript\">\n".$more."\n</script>\n" : '';
 	return ($result);
 	}
 
@@ -3203,16 +3203,10 @@ function sed_load_forum_structure()
  */
 function sed_log($text, $group = 'def')
 	{
-	global $db_logger, $sys, $usr, $_SERVER;
-        $log_text_errormsg = sed_sql_prep($text);
-        $log_text_request = sed_sql_prep(' - '.$_SERVER['REQUEST_URI']);
-        $log_text = $log_text_errormsg . $log_text_request;
-        if (strlen($log_text) > 255) {
-            $log_text_errormsg = substr($log_text_errormsg,0,255 - strlen($log_text_request));
-            $log_text = $log_text_errormsg . $log_text_request;
-        }
+	global $db_logger, $sys, $usr;
 
-        $sql = sed_sql_query("INSERT INTO $db_logger (log_date, log_ip, log_name, log_group, log_text) VALUES (".(int)$sys['now_offset'].", '".$usr['ip']."', '".sed_sql_prep($usr['name'])."', '$group', '$log_text')");
+	$text = mb_substr($text, 0, 250 - mb_strlen($sys['request_uri'])).' - '.$sys['request_uri'];
+	$sql = sed_sql_query("INSERT INTO $db_logger (log_date, log_ip, log_name, log_group, log_text) VALUES (".(int)$sys['now_offset'].", '".$usr['ip']."', '".sed_sql_prep($usr['name'])."', '$group', '".sed_sql_prep($text)."')");
 	return;
 	}
 
@@ -4544,13 +4538,13 @@ function sed_stat_set($name, $value)
  * @param int $maxsize Search limit 
  * @return int 
  */
-function sed_stringinfile($file, $str, $maxsize=32768)
+function sed_stringinfile($file, $str, $maxsize = 32768)
 	{
 	if ($fp = @fopen($file, 'r'))
 		{
 		$data = fread($fp, $maxsize);
 		$pos = mb_strpos($data, $str);
-		$result = ($pos===FALSE) ? FALSE : TRUE;
+		$result = ($pos === FALSE) ? FALSE : TRUE;
 		}
 	else
 		{ $result = FALSE; }
