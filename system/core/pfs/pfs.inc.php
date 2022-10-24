@@ -420,7 +420,7 @@ if ($f > 0)
 else
 	{
 	$sql = sed_sql_query("SELECT * FROM $db_pfs WHERE pfs_userid='$userid' AND pfs_folderid=0 ORDER BY pfs_date DESC");
-	$sql1 = sed_sql_query("SELECT * FROM $db_pfs_folders WHERE pff_userid='$userid' ORDER BY pff_type DESC, pff_date DESC");
+	$sql1 = sed_sql_query("SELECT * FROM $db_pfs_folders WHERE pff_userid='$userid' ORDER BY pff_type DESC, pff_title ASC");
 	$sql2 = sed_sql_query("SELECT COUNT(*) FROM $db_pfs WHERE pfs_folderid>0 AND pfs_userid='$userid'");
 	$sql3 = sed_sql_query("SELECT pfs_folderid, COUNT(*), SUM(pfs_size) FROM $db_pfs WHERE pfs_userid='$userid' GROUP BY pfs_folderid");
 
@@ -668,7 +668,7 @@ if ($usr['auth_write'])
 		}
 
 	$t->assign(array(
-		"PFS_UPLOAD_SEND" => sed_url("pfs", "a=upload"."&f=".$f."&".$more),
+		"PFS_UPLOAD_SEND" => sed_url("pfs", "a=upload"."&".$more),
 		"PFS_UPLOAD_MAXFILESIZE" => sed_textbox_hidden('MAX_FILE_SIZE', $maxfile*1024),
 		"PFS_UPLOAD_FOLDERS" => sed_selectbox_folders($userid, "", $f),
 	));

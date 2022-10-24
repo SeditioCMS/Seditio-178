@@ -34,20 +34,15 @@ if ($a == 'delete')
 	sed_check_xg();
 	
 	$sql = sed_sql_query("SELECT * FROM $db_com WHERE com_id='$id' LIMIT 1");
-			$row = sed_sql_fetchassoc($sql);
-			
-			$sql = sed_sql_query("DELETE FROM $db_com WHERE com_id='$id'");
+	$row = sed_sql_fetchassoc($sql);
 
-					if (mb_substr($row['com_code'], 0, 1) == 'p')
-						{
-						$page_id = mb_substr($row['com_code'], 1, 10);
-						$sql = sed_sql_query("UPDATE $db_pages SET page_comcount=".sed_get_comcount($row['com_code'])." WHERE page_id=".$page_id);
-						}
-					$com_grp = ($usr['isadmin']) ? "adm" : "usr";	
-					sed_log("Deleted comment #".$id." in '".$row['com_code']."'", $com_grp);
-					
-header("Location: ".$_SERVER['HTTP_REFERER']."");
-exit;
+	$sql = sed_sql_query("DELETE FROM $db_com WHERE com_id='$id'");
+
+	if (mb_substr($row['com_code'], 0, 1) == 'p')
+		{
+		$page_id = mb_substr($row['com_code'], 1, 10);
+		$sql = sed_sql_query("UPDATE $db_pages SET page_comcount=".sed_get_comcount($row['com_code'])." WHERE page_id=".$page_id);
+		}	
 	}
 
 $d = sed_import('d', 'G', 'INT');
