@@ -77,7 +77,6 @@ if ($a == 'newtopic')
 	$newprvtopic = sed_import('newprvtopic','P','BOL');
 	$newmsg = sed_import('newmsg','P','HTM');
 	$newprvtopic = (!$fs_allowprvtopics) ? 0 : $newprvtopic;
-
 	$error_string .= (mb_strlen($newtopictitle)<2) ? $L['for_titletooshort']."<br />" : '';
 	$error_string .= (mb_strlen($newmsg)<2) ? $L['for_msgtooshort']."<br />" : '';
 	
@@ -112,7 +111,7 @@ if ($a == 'newtopic')
 				".(int)$newprvtopic.",
 				0,
 				".(int)$s.",
-				'".sed_sql_prep($newtopictitle)."',
+				'".sed_sql_prep(sed_translit_seourl($newtopictitle))."',
 				'".sed_sql_prep($newtopicdesc)."',			
 				".(int)$sys['now_offset'].",
 				".(int)$sys['now_offset'].",

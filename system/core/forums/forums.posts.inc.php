@@ -435,7 +435,7 @@ if ($ft_poll > 0)
 $ft_title = ($ft_mode == 1) ? "# ".sed_cc($ft_title) : sed_cc($ft_title);
 
 $toptitle = "<a href=\"".sed_url("forums")."\">".$L['Forums']."</a> ".$cfg['separator']." ".sed_build_forums($s, $fs_title, $fs_category, TRUE, $parentcat);
-$toptitle .= " ".$cfg['separator']." <a href=\"".sed_url("forums", "m=posts&q=".$q)."\">".$ft_title."</a>";
+$toptitle .= " ".$cfg['separator']." <a href=\"".sed_url("forums", "m=posts&q=".$q )."\">".$ft_title."</a>";
 $toptitle .= ($usr['isadmin']) ? " *" : '';
 
 $sys['sublocation'] = $fs_title;
@@ -449,7 +449,7 @@ $out['subtitle'] = sed_title('forumstitle', $title_tags, $title_data);
 /**/
 
 /* ===== */
-$out['canonical_url'] = ($cfg['absurls']) ? sed_url("forums", "m=posts&q=".$q."&d=".$d) : $sys['abs_url'].sed_url("forums", "m=posts&q=".$q."&d=".$d);
+$out['canonical_url'] = ($cfg['absurls']) ? sed_url("forums", "m=posts&q=".$q."&d=".$d, "?".sed_translit_seourl($ft_title)) : $sys['abs_url'].sed_url("forums", "m=posts&q=".$q."&d=".$d, "?".sed_translit_seourl($ft_title));
 /* ===== */
 
 /* === Hook === */
@@ -467,7 +467,7 @@ $t = new XTemplate($mskin);
 $urlpaths = array();
 $urlpaths[sed_url("forums")] = $L['Forums'];
 sed_build_forums_bc($s, $fs_title, $fs_category, $parentcat);
-$urlpaths[sed_url("forums", "m=posts&q=".$q)] = $ft_title;
+$urlpaths[sed_url("forums", "m=posts&q=".$q, "?".sed_translit_seourl($ft_title)."")] = $ft_title;
 
 // ---------- Polls on forum
 if (!$cfg['disable_polls'] && $ft_poll > 0)

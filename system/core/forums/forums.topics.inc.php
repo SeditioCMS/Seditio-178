@@ -310,7 +310,7 @@ $out['subtitle'] = sed_title('forumstitle', $title_tags, $title_data);
 /**/
 
 /* ===== */
-$out['canonical_url'] = ($cfg['absurls']) ? sed_url("forums", "m=topics&s=".$s."&d=".$d) : $sys['abs_url'].sed_url("forums", "m=topics&s=".$s."&d=".$d);
+$out['canonical_url'] = ($cfg['absurls']) ? sed_url("forums", "m=topics&s=".$s."&d=".$d, "?".sed_translit_seourl($fs_title)) : $sys['abs_url'].sed_url("forums", "m=topics&s=".$s."&d=".$d, "?".sed_translit_seourl($fs_title));
 /* ===== */
 
 /* === Hook === */
@@ -497,8 +497,9 @@ while ($row = sed_sql_fetchassoc($sql))
 		}
 	else
 		{
-		$row['ft_url'] = sed_url("forums", "m=posts&q=".$row['ft_id']);
-		$row['ft_lastposturl'] = ($usr['id'] > 0 && $row['ft_updated'] > $usr['lastvisit']) ? "<a href=\"".sed_url("forums", "m=posts&q=".$row['ft_id']."&n=unread", "#unread")."\">".$out['ic_arrow_unread']."</a>" : "<a href=\"".sed_url("forums", "m=posts&q=".$row['ft_id']."&n=last", "#bottom")."\">".$out['ic_arrow_follow']."</a>";
+		$row['ft_url'] = sed_url("forums", "m=posts&q=".$row['ft_id'], "?".sed_translit_seourl($row['ft_title']));
+		$row['ft_lastposturl'] = ($usr['id'] > 0 && $row['ft_updated'] > $usr['lastvisit']) ? "<a href=\"".sed_url("forums", "m=posts&q=".$row['ft_id'], "?".sed_translit_seourl($row['ft_title'])."&n=unread#unread")."\">".$out['ic_arrow_unread']."</a>" : "<a href=\"".sed_url("forums", "m=posts&q=".$row['ft_id'], "?".sed_translit_seourl($row['ft_title'])."&n=last#bottom")."\">".$out['ic_arrow_follow']."</a>";
+		
 		$row['ft_lastposturl'] .= " ".sed_build_date($cfg['formatmonthdayhourmin'], $row['ft_updated']);
 		$row['ft_timago'] = sed_build_timegap($row['ft_updated'],$sys['now_offset']);
 		$row['ft_replycount'] = $row['ft_postcount'] - 1;
