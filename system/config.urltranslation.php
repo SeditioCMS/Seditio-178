@@ -137,17 +137,17 @@ $sed_urltrans['forums'] = array(
     /**/
     array( 
           'params' => 'm=topics&s=*', 
-          'rewrite' => 'forums/topics/{s}'
+          'rewrite' => 't/{s}'
     ),
     /**/
     array( 
           'params' => 'm=posts&q=*', 
-          'rewrite' => 'forums/posts/{q}'
+          'rewrite' => 'q/{q}'
     ),
     /**/
     array( 
           'params' => 'm=posts&p=*', 
-          'rewrite' => 'forums/post/{p}'
+          'rewrite' => 'p/{p}'
     ),
     /**/
     array( 
