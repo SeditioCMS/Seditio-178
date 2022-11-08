@@ -203,14 +203,7 @@ foreach ($sect_arr as $fsec_key => $fsec)
 			if ($fsn['fs_lt_id']>0)
 				{
 				$fsn['fs_timago'] = sed_build_timegap($fsn['fs_lt_date'], $sys['now_offset']);
-				$fsn['lastpost'] = ($usr['id']>0 && $fsn['fs_lt_date']>$usr['lastvisit'] && $fsn['fs_lt_posterid']!=$usr['id']) ? "
-				
-				<a href=\"".sed_url("forums","m=posts&q=".$fsn['fs_lt_id'], "?".sed_translit_seourl($fsn['fs_lt_title'])."&n=unread", "#unread")."\">" : "
-				
-				<a href=\"".sed_url("forums","m=posts&q=".$fsn['fs_lt_id'], "?".sed_translit_seourl($fsn['fs_lt_title'])."&n=last#bottom")."\">";
-				
-				//sed_translit_seourl(
-				//<a href=\"".sed_url("forums","m=posts&q=".$fsn['fs_lt_id']."&n=last", "#bottom")."\">
+				$fsn['lastpost'] = ($usr['id']>0 && $fsn['fs_lt_date']>$usr['lastvisit'] && $fsn['fs_lt_posterid']!=$usr['id']) ? "<a href=\"".sed_url("forums","m=posts&q=".$fsn['fs_lt_id'], "?".sed_translit_seourl($fsn['fs_lt_title'])."&n=unread", "#unread")."\">" : "<a href=\"".sed_url("forums","m=posts&q=".$fsn['fs_lt_id'], "?".sed_translit_seourl($fsn['fs_lt_title'])."&n=last#bottom")."\">";
 				
 				$fsn['lastpost'] .= sed_cutstring($fsn['fs_lt_title'], 32)."</a>";
 				}
