@@ -30,4 +30,4 @@ KONFİGÜRASYON VE ÖZELLEŞTİRME DOSYASI
 
 Ayarlar dosyada /datas/config.php
 
-Tüm sorularınız için lütfen ziyaret edin Seditio Team https://seditiocms.com
+Tüm sorularınız için lütfen ziyaret edin Seditio Team https://seditio.com.tr
