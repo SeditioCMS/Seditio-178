@@ -2550,15 +2550,15 @@ function sed_htmlmetas($description = '', $keywords = '', $contenttype = 'text/h
 	$keywords = (empty($keywords)) ? $cfg['metakeywords'] : htmlspecialchars($keywords);
 
 	$result = "
-		<base href=\"" . $sys['abs_url'] . "\" />
-		<meta http-equiv=\"content-type\" content=\"" . $contenttype . "; charset=" . $cfg['charset'] . "\" />
-		<meta name=\"description\" content=\"" . $description . "\" />
-		<meta name=\"keywords\" content=\"" . $keywords . "\" />
-		<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio.org\" />
-		<meta http-equiv=\"pragma\" content=\"no-cache\" />
-		<meta http-equiv=\"cache-control\" content=\"no-cache\" />
-		<meta http-equiv=\"last-modified\" content=\"" . gmdate("D, d M Y H:i:s") . " GMT\" />
-		<link rel=\"shortcut icon\" href=\"favicon.ico\" />";
+	<base href=\"" . $sys['abs_url'] . "\" />
+	<meta http-equiv=\"content-type\" content=\"" . $contenttype . "; charset=" . $cfg['charset'] . "\" />
+	<meta name=\"description\" content=\"" . $description . "\" />
+	<meta name=\"keywords\" content=\"" . $keywords . "\" />
+	<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio.org\" />
+	<meta http-equiv=\"pragma\" content=\"no-cache\" />
+	<meta http-equiv=\"cache-control\" content=\"no-cache\" />
+	<meta http-equiv=\"last-modified\" content=\"" . gmdate("D, d M Y H:i:s") . " GMT\" />
+	<link rel=\"shortcut icon\" href=\"favicon.ico\" />";
 	return ($result);
 }
 
@@ -5503,8 +5503,13 @@ function sed_browser($url, $post = array(), $uagent = "Mozilla/4.0 (compatible; 
 	return $html;
 }
 
-/** 
- * CURL DOWNLOAD FILE 
+/**
+ * CURL DOWNLOAD FILE
+ *
+ * @param string $url Distantion url
+ * @param string $path Source file path
+ * @param string $uagent User agent
+ * @return void
  */
 function sed_getfile($url, $path, $uagent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;)", $proxy = '', $ssl_verifypeer = false, $ssl_verifyhost = false)
 {
@@ -5526,7 +5531,14 @@ function sed_getfile($url, $path, $uagent = "Mozilla/4.0 (compatible; MSIE 6.0; 
 	fclose($fp);
 }
 
-
+/**
+ * Download image from distantion url
+ *
+ * @param string $source_file Source file path
+ * @param string $dst_dir Distantion file path
+ * @param int $uid 
+ * @return string
+ */
 function sed_download_img($source_file, $dst_dir, $uid)
 {
 	$imgsize = getimagesize($source_file);
@@ -5548,7 +5560,6 @@ function sed_download_img($source_file, $dst_dir, $uid)
 
 		default:
 			return false;
-			break;
 	}
 	$dst_file = $uid . $ext;
 	sed_getfile($source_file, $dst_dir . $dst_file);
