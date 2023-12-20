@@ -2163,7 +2163,7 @@ function sed_die_message($code, $header = TRUE, $message_title = '', $message_bo
 function sed_diefatal($text = 'Reason is unknown.', $title = 'Fatal error')
 {
 	global $cfg;
-	$disp = "<div style=\"font:14px Segoe UI, Verdana, Arial; border:1px dashed #CCCCCC; padding:8px; margin:16px;\">";
+	$disp .= (isset($cfg['mainurl']) && isset($cfg['mainurl'])) ? "<strong><a href=\"" . $cfg['mainurl'] . "\">" . $cfg['maintitle'] . "</a></strong><br />" : "";
 	$disp .= "<strong><a href=\"" . $cfg['mainurl'] . "\">" . $cfg['maintitle'] . "</a></strong><br />";
 	$disp .= @date('Y-m-d H:i') . ' / ' . $title . ' : ' . $text;
 	$disp .= "</div>";
