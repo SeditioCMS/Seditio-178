@@ -227,7 +227,7 @@ function sed_ajax_flush($res, $ajax, $content_type = 'text/html')
  * Generation avatar from first username letter
  *
  * @param int $uid
- * @return array status result
+ * @return array|bool status result
  */
 function sed_autogen_avatar($uid)
 {
@@ -418,7 +418,7 @@ function sed_build_addtxt($c1, $c2)
  * Calculates age out of D.O.B. 
  * 
  * @param int $birth Date of birth as UNIX timestamp 
- * @return int 
+ * @return int|string 
  */
 function sed_build_age($birth)
 {
@@ -1937,7 +1937,7 @@ function sed_check_xg()
 /** 
  * Checks POST anti-XSS parameter 
  * 
- * @return bool 
+ * @return string
  */
 function sed_check_xp()
 {
@@ -2025,7 +2025,7 @@ function sed_cutreadmore($text, $url)
 /** 
  * JS build antispam
  * 
- * @return bool 
+ * @return string
  */
 function sed_build_antispam()
 {
@@ -2163,8 +2163,8 @@ function sed_die_message($code, $header = TRUE, $message_title = '', $message_bo
 function sed_diefatal($text = 'Reason is unknown.', $title = 'Fatal error')
 {
 	global $cfg;
+	$disp = "<div style=\"font:14px Segoe UI, Verdana, Arial; border:1px dashed #CCCCCC; padding:8px; margin:16px;\">";
 	$disp .= (isset($cfg['mainurl']) && isset($cfg['mainurl'])) ? "<strong><a href=\"" . $cfg['mainurl'] . "\">" . $cfg['maintitle'] . "</a></strong><br />" : "";
-	$disp .= "<strong><a href=\"" . $cfg['mainurl'] . "\">" . $cfg['maintitle'] . "</a></strong><br />";
 	$disp .= @date('Y-m-d H:i') . ' / ' . $title . ' : ' . $text;
 	$disp .= "</div>";
 	die($disp);
@@ -2333,8 +2333,8 @@ function sed_forum_sectionsetlast($id)
 /**
  * Function to generate letter avatar
  *
- * @param Text, Font Size, Image width and height
- * @return Image Url
+ * @param string, Font Size, Image width and height
+ * @return array Url
  */
 function sed_gen_letteravatar($text, $uid, $fontSize, $imgWidth, $imgHeight)
 {
@@ -2512,8 +2512,8 @@ function sed_hash($data, $type = 1, $salt = '')
 /**
  * Convert hex value to rgb array
  *
- * @param Color
- * @return hex value 
+ * @param string $colour Hex code
+ * @return array|bool RGB code
  */
 function sed_hextorgb($colour)
 {
@@ -2575,8 +2575,12 @@ function sed_html($text)
 /**
  * Get center position on image
  *
- * @param image,text,font,size,angle
- * @return position 
+ * @param GdImage $image
+ * @param string $text
+ * @param string $font
+ * @param float $size
+ * @param float $angle
+ * @return array Position 
  */
 function sed_image_ttf_center($image, $text, $font, $size, $angle = 8)
 {
@@ -2855,7 +2859,7 @@ function sed_radio_item($name, $value, $title = '', $id = '', $checked = false, 
  * Creating input field radio
  * 
  * @param string $name Name input tag 
- * @param array $data Value input tag
+ * @param string|array $data Value input tag
  * @param bool $check Checked flag  
  * @return string 
  */
@@ -2962,8 +2966,8 @@ function sed_textarea($name, $value, $rows, $cols, $editor = "noeditor")
  * Creating input field checkbox
  * 
  * @param string $name Name input tag 
- * @param array $data Value(s) checkbox input tag
- * @param array $check_data Checked value(s) checkbox input tag
+ * @param string|array $data Value(s) checkbox input tag
+ * @param string|array $check_data Checked value(s) checkbox input tag
  * @param bool $disabled Disabled flag  
  * @return string 
  */
