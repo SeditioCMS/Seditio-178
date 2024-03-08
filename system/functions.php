@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=system/functions.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Core
 Author=Seditio Team
@@ -69,7 +69,7 @@ $cfg['textarea_default_width'] = 75;
 $cfg['textarea_default_height'] = 16;
 $cfg['sqldb'] = 'mysql';
 $cfg['sqldbprefix'] = 'sed_';
-$cfg['version'] = '179';
+$cfg['version'] = '178';
 $cfg['versions_list'] = array(120, 121, 125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178, 179);
 $cfg['group_colors'] = array('red', 'yellow', 'black', 'blue', 'white', 'green', 'gray', 'navy', 'darkmagenta', 'pink', 'cadetblue', 'linen', 'deepskyblue', 'inherit');
 $cfg['separator_symbol'] = "&raquo;";
@@ -110,7 +110,7 @@ foreach ($sed_dbnames as $k => $i) {
 
 // For compatibility with PHP < 5.2 
 
-if (PHP_VERSION < '5.2.0') {
+if (PHP_VERSION < '5.4.0') {
 	function mb_stripos($haystack, $needle, $offset = 0)
 	{
 		return stripos($haystack, $needle, $offset);
@@ -2552,7 +2552,7 @@ function sed_htmlmetas($description = '', $keywords = '', $contenttype = 'text/h
 	<meta http-equiv=\"content-type\" content=\"" . $contenttype . "; charset=" . $cfg['charset'] . "\" />
 	<meta name=\"description\" content=\"" . $description . "\" />
 	<meta name=\"keywords\" content=\"" . $keywords . "\" />
-	<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio.org\" />
+	<meta name=\"generator\" content=\"Seditio by Seditio Team https://seditio.com.tr\" />
 	<meta http-equiv=\"pragma\" content=\"no-cache\" />
 	<meta http-equiv=\"cache-control\" content=\"no-cache\" />
 	<meta http-equiv=\"last-modified\" content=\"" . gmdate("D, d M Y H:i:s") . " GMT\" />
@@ -4147,7 +4147,7 @@ function sed_setcookie($name, $value, $expire = '', $path = '/', $domain = '', $
 		if (mb_substr($domain, 0, 1) != '.') $domain = '.' . $domain;
 	}
 
-	if (PHP_VERSION < '5.2.0') {
+	if (PHP_VERSION < '5.4.0') {
 		return setcookie($name, $value, $expire, $path, $domain, $secure);
 	} else {
 		return setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
@@ -4179,7 +4179,7 @@ function sed_setcookie_params($expire = 0, $path = '/', $domain = '', $secure = 
 		if (mb_substr($domain, 0, 1) != '.') $domain = '.' . $domain;
 	}
 
-	if (PHP_VERSION < '5.2.0') {
+	if (PHP_VERSION < '5.4.0') {
 		return session_set_cookie_params($expire, $path, $domain, $secure);
 	} else {
 		return session_set_cookie_params($expire, $path, $domain, $secure, $httponly);
@@ -4514,7 +4514,7 @@ function sed_title($mask, $tags, $data)
 
 	$cnt = count($data);
 	for ($i = 0; $i < $cnt; $i++) {
-		if (version_compare(PHP_VERSION, '5.2.2', '<=')) {
+		if (version_compare(PHP_VERSION, '5.4.2', '<=')) {
 			$data[$i] = htmlspecialchars($data[$i], ENT_COMPAT, 'UTF-8');
 		} else {
 			$data[$i] = htmlspecialchars($data[$i], ENT_COMPAT, 'UTF-8', false);

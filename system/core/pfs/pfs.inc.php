@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=pfs.inc.php
-Version=179
+Version=178
 Updated=2022-jul-20
 Type=Core
 Author=Seditio Team
@@ -174,15 +174,7 @@ if ($a == 'upload') {
 
 			if (is_uploaded_file($u_tmp_name) && $u_size > 0 && $u_size < ($maxfile * 1024) && $f_extension_ok && ($pfs_totalsize + $u_size) < $maxtotal * 1024) {
 				if (!file_exists($cfg['pfs_dir'] . $u_name)) {
-					/*
-					if ($cfg['pfsuserfolder'])
-						{
-						if (!is_dir($cfg['pfs_dir']))
-							{ mkdir($cfg['pfs_dir'], 0666); }
-						if (!is_dir($cfg['th_dir']))
-							{ mkdir($cfg['th_dir'], 0666); }
-						}
-					*/
+				
 					move_uploaded_file($u_tmp_name, $cfg['pfs_dir'] . $u_name);
 					@chmod($cfg['pfs_dir'] . $u_name, 0766);
 

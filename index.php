@@ -3,11 +3,11 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=index.php
-Version=179
-Updated=2021-jun-15
+Version=178
+Updated=2022-jun-15
 Type=Core
 Author=Seditio Team
 Description=SEF Url's loader

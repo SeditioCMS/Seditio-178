@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=page.inc.php
-Version=179
+Version=178
 Updated=2013-nov-24
 Type=Core
 Author=Seditio Team
@@ -112,9 +112,7 @@ if ($pag['page_file'] && $a == 'dl') {
 	} else {
 		sed_redirect($sys['abs_url'] . $pag['page_url']);
 	}
-
-	//	echo("<script type='text/javascript'>location.href='".$pag['page_url']."';</script>Redirecting...");
-	exit;
+		exit;
 }
 
 if (!$usr['isadmin'] || $cfg['disablehitstats']) {

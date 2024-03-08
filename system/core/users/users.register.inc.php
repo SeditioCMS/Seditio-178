@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=users.register.inc.php
-Version=179
+Version=178
 Updated=2022-aug-02
 Type=Core
 Author=Seditio Team
@@ -29,6 +29,12 @@ if ($cfg['disablereg']) {
 	sed_redirect(sed_url("message", "msg=117", "", true));
 	exit;
 }
+
+if ($usr['id'] > 0) {
+	header("Location: ".$cfg['mainurl']);
+	exit;
+}
+
 
 /* === Hook === */
 $extp = sed_getextplugins('users.register.first');

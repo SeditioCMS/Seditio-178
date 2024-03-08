@@ -3,7 +3,7 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditiocms.com
+https://seditio.com.tr
 [BEGIN_SED]
 File=upgrade_125_130.php
 Version=178

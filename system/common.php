@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=system/common.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Core
 Author=Seditio Team
@@ -443,7 +443,7 @@ $yesno_revers_arr = array(0 => $L['Yes'], 1 => $L['No']);
 /* ======== Who's online part 2 ======== */
 
 $out['whosonline'] = ($cfg['disablewhosonline']) ? '' : $sys['whosonline_reg_count'] . ' ' . $L['com_members'] . ', ' . $sys['whosonline_vis_count'] . ' ' . $L['com_guests'];
-$out['copyright'] = "<a href=\"https://seditio.org\">" . $L['foo_poweredby'] . " Seditio</a>";
+$out['copyright'] = "<a href=\"https://seditio.com.tr\">" . $L['foo_poweredby'] . " Seditio</a>";
 
 /* ======== Various ======== */
 

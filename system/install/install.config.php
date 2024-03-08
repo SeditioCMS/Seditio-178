@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=install.config.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Core.install
 Author=Seditio Team
@@ -21,7 +21,7 @@ if (!defined('SED_CODE') || !defined('SED_INSTALL')) {
 $cfg_data = "<?PHP\n\n/* ====================\n";
 $cfg_data .= "Seditio - Website engine\n";
 $cfg_data .= "Copyright Neocrome & Seditio Team\n";
-$cfg_data .= "https://seditio.org\n";
+$cfg_data .= "https://seditio.com.tr\n";
 $cfg_data .= "[BEGIN_SED]\n";
 $cfg_data .= "File=datas/config.php\n";
 $cfg_data .= "Version=" . $cfg['version'] . "\n";

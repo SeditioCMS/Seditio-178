@@ -3,7 +3,7 @@
 /*  ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditiocms.com
+https://seditio.com.tr
 -----------------------
 Seditio language pack
 Language : Türkçe (code:tr)

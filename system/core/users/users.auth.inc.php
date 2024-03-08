@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=users.auth.inc.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Core
 Author=Seditio Team
@@ -16,6 +16,11 @@ Description=User authentication
 
 if (!defined('SED_CODE')) {
 	die('Wrong URL.');
+}
+
+if ($usr['id'] > 0) {
+	header("Location: ".$cfg['mainurl']);
+	exit;
 }
 
 $v = sed_import('v', 'G', 'H32');

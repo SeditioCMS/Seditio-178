@@ -6,7 +6,7 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=skins/sympfy/sympfy.ru.lang.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Skin
 Name=Sympfy

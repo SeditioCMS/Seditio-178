@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=system/functions.admin.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Core
 Author=Seditio Team
@@ -364,7 +364,7 @@ function sed_loadconfigmap()
 	$result = array();
 	$result[] = array('main', '01', 'maintitle', 1, 'Title of your site', '');
 	$result[] = array('main', '02', 'subtitle', 1, 'Subtitle', '');
-	$result[] = array('main', '03', 'mainurl', 1, 'http://www.yourdomain.com', '');
+	$result[] = array('main', '03', 'mainurl', 1, 'https://www.yourdomain.com', '');
 	$result[] = array('main', '03', 'multihost', 3, '1', '');    // New in v175
 	$result[] = array('main', '04', 'absurls', 3, '0', '');   // New in v175
 	$result[] = array('main', '04', 'sefurls', 3, '1', '');   // New in v175

@@ -3,7 +3,7 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditiocms.com
+https://seditio.com.tr
 [BEGIN_SED]
 File=install.tr.lang.php
 Version=178
@@ -44,7 +44,7 @@ $L['install_installed_plugins'] = "eklentiler kurulu (";
 $L['install_display_log'] = "Günlüğü görüntüle";
 $L['install_contine_homepage'] = "Ana sayfaya devam et";
 $L['install_error'] = "Hata !";
-$L['install_wrong_manual'] = "Bir şeyler ters gitti, Seditio'yu manuel olarak kurmanız gerekecek, adımlar ayrıntılı olarak açıklanmıştır <a href=\"http://www.seditiocms.com/seditio-php-70-ve-ustu-kurulum-video/65\">burada</a>.";
+$L['install_wrong_manual'] = "Bir şeyler ters gitti, Seditio'yu manuel olarak kurmanız gerekecek, adımlar ayrıntılı olarak açıklanmıştır <a href=\"https://seditio.com.tr/dokumanlar/\">burada</a>.";
 $L['install_database_setup'] = "SQL veritabanı kurulumu :";
 $L['install_database_hosturl'] = "Veritabanı ana bilgisayar URL'si :";
 $L['install_always_localhost'] = "Neredeyse her zaman 'localhost'";

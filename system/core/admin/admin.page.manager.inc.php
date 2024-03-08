@@ -3,10 +3,10 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 [BEGIN_SED]
 File=admin.page.manager.php
-Version=179
+Version=178
 Updated=2015-may-24
 Type=Core.admin
 Author=Seditio Team

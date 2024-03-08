@@ -3,15 +3,15 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditiocms.com
+https://seditio.com.tr
 [BEGIN_SED]
 File=skins/sympfy/sympfy.tr.lang.php
-Version=179
+Version=178
 Updated=2022-jul-15
 Type=Skin
 Name=Sympfy
 Author=Kaan
-Url=https://seditiocms.com
+Url=https://seditio.com.tr
 Description=Official skin
 [END_SED]
 ==================== */
